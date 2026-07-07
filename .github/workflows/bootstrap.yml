@@ -21,8 +21,9 @@ jobs:
     steps:
       - name: Install repositories
         run: |
-          echo '#!/bin/sh' >> /usr/local/bin/zy
-          echo 'env ZYPP_PCK_PRELOAD=1 ZYPP_CURL2=1 zypper $@' >> /usr/local/bin/zy
+          echo '#!/bin/sh' >> ./zy
+          echo 'env ZYPP_PCK_PRELOAD=1 ZYPP_CURL2=1 zypper $@' >> ./zy
+          chmod +x ./zy
           cat<<EOF > /etc/zypp/zypper.conf
           [download]
           max_concurrent_connections = 100
@@ -34,7 +35,7 @@ jobs:
           autoAgreeWithLicenses = yes
           EOF
 
-          zy install -y --setopt=install_weak_deps=False curl wget git-core openssl-devel cargo podman fuse-overlayfs rpmbuild script
+          ./zy install -y --setopt=install_weak_deps=False curl wget git-core openssl-devel cargo podman fuse-overlayfs rpmbuild script
 
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
@@ -45,17 +46,17 @@ jobs:
           mkdir -p anda-build/rpm/rpms
           rpmbuild -bb tuatara/srpm-macros/*.spec --undefine=_disable_source_fetch -D "_sourcedir $(pwd)/anda/tuatara/srpm-macros/" -D "_rpmdir $(pwd)/anda-build/rpm/rpms/"
           mv ./anda-build/rpm/rpms/*/anda-*.rpm ./anda-build/rpm/rpms/
-          zy install -y ./anda-build/rpm/rpms/anda-*.rpm
+          ./zy install -y ./anda-build/rpm/rpms/anda-*.rpm
 
       - name: Install build dependencies
         run: |
-          zy install -y $(rpmspec -q tuatara/*/*.spec --buildrequires)
+          ./zy install -y $(rpmspec -q tuatara/*/*.spec --buildrequires)
 
       - name: Install Anda
         run: |
           rpmbuild -bb tuatara/anda/*.spec --undefine=_disable_source_fetch -D "_sourcedir $(pwd)/tuatara/anda/" -D "_rpmdir $(pwd)/anda-build/rpm/rpms/"
           mv ./anda-build/rpm/rpms/*/anda-*.rpm ./anda-build/rpm/rpms/
-          zy install -y ./anda-build/rpm/rpms/anda-*.rpm
+          ./zy install -y ./anda-build/rpm/rpms/anda-*.rpm
 
       - name: Build tuatara-mock-configs
         run: |
@@ -75,7 +76,7 @@ jobs:
       - name: Build Subatomic
         run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/subatomic
       - name: Install Subatomic
-        run: zy install -y ./anda-build/rpm/rpms/subatomic-*.rpm
+        run: ./zy install -y ./anda-build/rpm/rpms/subatomic-*.rpm
 
       - name: Tidy up output directory
         run: rmdir anda-build/rpm/rpms/{noarch,aarch64,x86_64} | true
