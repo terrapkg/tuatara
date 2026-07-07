@@ -1,0 +1,58 @@
+Name:           anda-srpm-macros
+Version:        0.3.13
+Release:        1%{?dist}
+Summary:        SRPM macros for extra Fedora packages
+
+License:        GPL-3.0-or-later
+URL:            https://github.com/terrapkg/srpm-macros
+Source0:        %url/archive/refs/tags/v%{version}.tar.gz
+
+Recommends:     rust-packaging
+Requires:       git-core
+Obsoletes:      fyra-srpm-macros < 0.1.1-1
+Provides:       fyra-srpm-macros = %{version}-%{release}
+BuildArch:      noarch
+
+Packager:       Terra Packaging Team <terra@fyralabs.com>
+
+%description
+%{summary}
+
+%prep
+%autosetup -n srpm-macros-%version
+
+%build
+
+%install
+for file in ./macros.*; do
+    install -Dpm644 -t %buildroot%_rpmmacrodir $file
+done
+install -Dpm755 *.sh -t %buildroot%_libexecdir/%name/
+
+%files
+%attr(0755, root, root) %_libexecdir/%name/*.sh
+%doc README.md
+%license LICENSE
+%{_rpmmacrodir}/macros.anda
+%{_rpmmacrodir}/macros.caching
+%{_rpmmacrodir}/macros.cargo_extra
+%{_rpmmacrodir}/macros.electron
+%{_rpmmacrodir}/macros.go_extra
+%{_rpmmacrodir}/macros.nim_extra
+%{_rpmmacrodir}/macros.nodejs_extra
+%{_rpmmacrodir}/macros.zig_extra
+%{_rpmmacrodir}/macros.tauri
+%{_rpmmacrodir}/macros.webapps
+
+%changelog
+* Wed Aug 14 2024 madonuko <mado@fyralabs.com> - 0.1.7-2
+- Move sources outside of packages repo
+
+* Wed Mar 13 2024 madonuko <mado@fyralabs.com> - 0.1.6-1
+- Add nim_c, nim_tflags and nim_lflags
+
+* Thu Aug 3 2023 madonuko <mado@fyralabs.com> - 0.1.4-1
+- Add go_build_online and go_prep_online
+
+* Mon Sep 26 2022 Cappy Ishihara <cappy@cappuchino.xyz> - 0.1.1-1
+- Initial Build

@@ -1,0 +1,67 @@
+name: Manual Builds
+permissions:
+  contents: read
+  attestations: write
+  artifact-metadata: write
+  id-token: write
+on:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: "Packages to Build"
+        required: true
+      custom_builder:
+        description: "Custom Builder"
+        required: false
+        default: ""
+      architecture:
+        description: "Architectures"
+        required: false
+        default: ""
+        type: string
+
+run-name: ${{ inputs.packages }}
+
+jobs:
+  manifest:
+    outputs:
+      build_matrix: ${{ steps.parsing.outputs.build_matrix }}
+    runs-on: ubuntu-24.04-arm
+    container:
+      image: ghcr.io/terrapkg/builder:frawhide
+      options: --cap-add=SYS_ADMIN --privileged
+    steps:
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          fetch-depth: 0
+      - name: Setup Git
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "Raboneko"
+          git config user.email "raboneko@fyralabs.com"
+      - name: Parse Input
+        id: parsing
+        run: |
+          for pkg in ${{ inputs.packages }}; do
+            touch $pkg/.build
+          done
+          git add --all
+          git commit -a -m "tmp"
+          b=$(anda ci | sed -E 's@^build_matrix=@@')
+          if [ "${{ inputs.architecture }}" != "" ]; then
+            # e.g.: [ unique_by(.pkg)[] | (.arch="x86_64", .arch="aarch64") ]
+            filter=`echo -n "${{ inputs.architecture }}" | tr '[:space:]' '\n' | sed -E '/^$/d; s@^.+$@.arch="\0"@' | tr '\n' ', '`
+            b=`echo $b | jq -c '[unique_by(.pkg)[] | ('"$filter"')]'`
+          elif [ "${{ inputs.custom_builder }}" != "" ]; then
+            b=`echo $b | jq -c 'unique_by(.pkg)'`
+          fi
+          echo "build_matrix=$b" >> $GITHUB_OUTPUT
+
+  build:
+    needs: manifest
+    uses: ./.github/workflows/json-build.yml
+    secrets: inherit
+    with:
+      packages: ${{ needs.manifest.outputs.build_matrix }}
+      custom_builder: ${{ inputs.custom_builder }}

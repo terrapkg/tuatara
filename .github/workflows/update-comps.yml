@@ -1,0 +1,26 @@
+name: Push comps updates
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - tumbleweed
+    paths:
+      - comps.xml
+  workflow_dispatch:
+
+jobs:
+  update-comps:
+    runs-on: ubuntu-24.04-arm
+    container:
+      image: ghcr.io/terrapkg/builder:tumbleweed
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - name: Push to subatomic
+        run: |
+          branch=${{ github.ref_name }}
+          subatomic-cli upload-comps \
+            --server https://subatomic.fyralabs.com \
+            --token ${{ secrets.SUBATOMIC_TOKEN }} \
+            tuatara-$branch comps.xml

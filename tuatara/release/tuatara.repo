@@ -1,0 +1,24 @@
+[tuatara]
+name=Tuatara $releasever
+#baseurl=https://repos.fyralabs.com/tuatara-$releasever
+metalink=https://tetsudou.fyralabs.com/metalink?repo=tuatara-$releasever&arch=$basearch
+metadata_expire=6h
+type=rpm
+gpgcheck=1
+gpgkey=https://repos.fyralabs.com/tuatara-$releasever/key.asc
+repo_gpgcheck=1
+enabled=1
+enabled_metadata=1
+countme=1
+
+[tuatara-source]
+name=Tuatara $releasever - Source
+#baseurl=https://repos.fyralabs.com/tuatara-$releasever-source
+metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-source&arch=$basearch
+metadata_expire=6h
+type=rpm
+gpgcheck=1
+gpgkey=https://repos.fyralabs.com/tuatara-$releasever-source/key.asc
+repo_gpgcheck=1
+enabled=0
+enabled_metadata=0
