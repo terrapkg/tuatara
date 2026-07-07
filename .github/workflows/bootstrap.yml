@@ -21,8 +21,8 @@ jobs:
     steps:
       - name: Install repositories
         run: |
-          echo '#!/bin/sh' >> /bin/zy
-          echo 'env ZYPP_PCK_PRELOAD=1 ZYPP_CURL2=1 zypper $@' >> /bin/zy
+          echo '#!/bin/sh' >> /usr/local/bin/zy
+          echo 'env ZYPP_PCK_PRELOAD=1 ZYPP_CURL2=1 zypper $@' >> /usr/local/bin/zy
           cat<<EOF > /etc/zypp/zypper.conf
           [download]
           max_concurrent_connections = 100
