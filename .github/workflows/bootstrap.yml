@@ -1,3 +1,12 @@
+# Before you trigger this workflow, make sure the subatomic repositories are created:
+# subatomic-cli repo create tuatara-tumbleweed rpm
+# subatomic-cli repo create tuatara-tumbleweed-source rpm
+# subatomic-cli keys create tuatara-tumbleweed "Tuatara Tumbleweed" 'security@fyralabs.com'
+# subatomic-cli keys create tuatara-tumbleweed-source "Tuatara Tumbleweed - Source" 'security@fyralabs.com' 
+# for repo in tuatara-tumbleweed{,-source}; do subatomic-cli repo set-key $repo $repo; done
+#
+# After the workflow passes, issue a new run of builders at: https://github.com/terrapkg/builder
+
 name: Bootstrap Andaman and Subatomic
 permissions:
   contents: read
@@ -35,7 +44,7 @@ jobs:
           autoAgreeWithLicenses = yes
           EOF
 
-          ./zy install -y --setopt=install_weak_deps=False curl wget git-core openssl-devel cargo podman fuse-overlayfs rpmbuild script
+          ./zy install -y curl wget git-core openssl-devel cargo podman fuse-overlayfs rpmbuild script
 
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
@@ -89,12 +98,15 @@ jobs:
             tuatara${{ matrix.version }} anda-build/rpm/rpms/*
 
       - name: Upload source packages to subatomic
-        if: github.event_name == 'push'
         run: |
           subatomic-cli upload --prune \
             --server https://subatomic.fyralabs.com \
             --token ${{ secrets.SUBATOMIC_TOKEN }} \
             tuatara-${{ matrix.version }}-source anda-build/rpm/srpm/*
+
+      - name: Create Madoguchi Repository
+        run: |
+          curl -H "Authorization: Bearer ${{ secrets.MADOGUCHI_JWT }}" https://madoguchi.fyralabs.com/v4/repos/tuatara-${{ matrix.version }} -X PUT -H "Content-Type: application/json" -d '{"gh":"https://github.com/terrapkg/tuatara/tree/${{ matrix.version }}","link":"https://repos.fyralabs.com/tuatara-${{ matrix.version }}/"}' --fail-with-body
 
       - name: Attest build provenance
         uses: actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v4.1.1
