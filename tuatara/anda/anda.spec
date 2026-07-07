@@ -14,7 +14,7 @@ BuildRequires:  clang
 %else
 BuildRequires:  gcc
 %endif
-BuildRequires:  rust-packaging >= 21
+BuildRequires:  cargo-packaging
 BuildRequires:  anda-srpm-macros
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  git-core
@@ -24,10 +24,7 @@ Requires:       mock
 Requires:       rpm-build
 Requires:       createrepo_c
 Requires:       git-core
-%if 0%{?fedora} >= 42
-Requires:       mock-filesystem
-Requires:       util-linux-script
-%endif
+Requires:       script
 Packager:       Terra Packaging Team <terra@fyralabs.com>
 
 %description
@@ -37,7 +34,7 @@ Andaman Build toolchain.
 
 %prep
 %autosetup -n %{crate}-%{version}
-%cargo_prep_online
+#cargo_prep_online
 %{__cargo} fetch --locked
 
 %build
