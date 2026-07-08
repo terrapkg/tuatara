@@ -1,4 +1,5 @@
 %global bash_completions_dir %_datadir/bash-completion/completions
+%global fish_completions_dir %_datadir/fish/vendor_completions.d
 %global toolchain gcc
 %global crate anda
 
