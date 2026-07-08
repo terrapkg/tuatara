@@ -1,3 +1,4 @@
+%global bash_completions_dir %_datadir/bash-completion/completions
 %global toolchain gcc
 %global crate anda
 
