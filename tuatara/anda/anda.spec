@@ -26,7 +26,7 @@ BuildRequires:  mold
 Requires:       rpm-build
 Requires:       createrepo_c
 Requires:       git-core
-Requires:       script
+Requires:       util-linux
 Packager:       Terra Packaging Team <terra@fyralabs.com>
 
 %description
