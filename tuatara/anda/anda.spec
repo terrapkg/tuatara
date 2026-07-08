@@ -39,7 +39,7 @@ Andaman Build toolchain.
 
 %build
 %{cargo_build} --frozen
-%{cargo_license_online} > LICENSE.dependencies
+cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e "\|/.*:|{s|/| OR |}" | sort -u > LICENSE.dependencies
 %{__cargo} run --release -p xtask -- manpage
 %{__cargo} run --release -p xtask -- completion
 
