@@ -7,7 +7,8 @@ URL:            https://github.com/terrapkg/appstream-helper
 Source:         %{url}/archive/refs/tags/v%version.tar.gz
 BuildArch:      noarch
 Requires:       python3-%{name} = %{evr}
-BuildRequires:  anda-srpm-macros python3-devel python3-installer pyproject-rpm-macros
+BuildRequires:  anda-srpm-macros
+BuildRequires:  python-rpm-macros
 BuildRequires:  python3-pip
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-wheel
