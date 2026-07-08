@@ -44,7 +44,7 @@ cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e 
 %{__cargo} run --release -p xtask -- completion
 
 %install
-%crate_install_bin
+install -Dpm644 target/release/anda -t %buildroot%_bindir
 
 # Install shell completions
 COMPDIR="target/assets/completion"
