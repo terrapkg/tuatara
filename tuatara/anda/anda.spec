@@ -23,7 +23,6 @@ BuildRequires:  pkgconfig(openssl)
 BuildRequires:  git-core
 BuildRequires:  pkgconfig(libgit2)
 BuildRequires:  mold
-Requires:       mock
 Requires:       rpm-build
 Requires:       createrepo_c
 Requires:       git-core
