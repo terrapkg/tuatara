@@ -7,7 +7,10 @@ URL:            https://github.com/terrapkg/appstream-helper
 Source:         %{url}/archive/refs/tags/v%version.tar.gz
 BuildArch:      noarch
 Requires:       python3-%{name} = %{evr}
-BuildRequires:  anda-srpm-macros python3-devel python3-installer pyproject-rpm-macros python3dist(pip) python3dist(setuptools) python3dist(wheel)
+BuildRequires:  anda-srpm-macros python3-devel python3-installer pyproject-rpm-macros
+BuildRequires:  python3-pip
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-wheel
 
 Packager:       Terra Packaging Team <terra@fyralabs.com>
 
@@ -35,8 +38,6 @@ Python files needed for %{name}.
 
 %install
 %pyproject_install
-%pyproject_save_files -l terra_appstream_helper
-install -Dpm644 terra-appstream.macros %buildroot%_rpmmacrodir/macros.terra-appstream
 
 %files
 %license LICENSE
@@ -45,10 +46,6 @@ install -Dpm644 terra-appstream.macros %buildroot%_rpmmacrodir/macros.terra-apps
 %{_rpmmacrodir}/macros.terra-appstream
 
 
-
-%files -n python3-%{name} -f %{pyproject_files}
-
-
-
-%changelog
-%autochangelog
+%files -n python3-%{name}
+%{python_sitelib}/terra_appatream_helper*/
+%pycache_only %{python_sitelib}/__pycache__/*

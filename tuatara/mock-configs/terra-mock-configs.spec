@@ -8,8 +8,6 @@ License:        MIT
 URL:            https://github.com/terrapkg/mock-configs
 Source0:        %url/archive/refs/tags/v%version.tar.gz
 
-BuildRequires:  mock-core-configs
-Requires:       mock-core-configs
 BuildArch:      noarch
 
 Provides: anda-mock-configs = %{epoch}:%{version}-%{release}
