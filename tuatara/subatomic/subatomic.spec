@@ -11,7 +11,6 @@ Source0:        %url/archive/refs/tags/v%version.tar.gz
 
 BuildRequires:  golang-packaging
 BuildRequires:  git-core
-BuildRequires:  pkgconfig(ostree-1)
 BuildRequires:  gcc
 Requires:       createrepo_c
 
