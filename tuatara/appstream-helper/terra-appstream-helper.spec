@@ -29,9 +29,6 @@ Python files needed for %{name}.
 %prep
 %autosetup -n appstream-helper-%{version}
 
-%generate_buildrequires
-%pyproject_buildrequires
-
 
 %build
 %pyproject_wheel
