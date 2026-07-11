@@ -38,8 +38,8 @@ go mod vendor
 %dnl %goprep %{import_path}
 %dnl %gobuild server
 %dnl %gobuild subatomic-cli
-go build -o out/subatomic -mod=vendor -buildmode=pie server
-go build -o out/subatomic-cli -mod=vendor -buildmode=pie subatomic-cli
+go build -o out/subatomic -mod=vendor -buildmode=pie %import_path/server
+go build -o out/subatomic-cli -mod=vendor -buildmode=pie %import_path/subatomic-cli
 
 
 %install
