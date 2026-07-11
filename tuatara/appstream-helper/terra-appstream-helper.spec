@@ -13,6 +13,7 @@ BuildRequires:  python3-pip
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-wheel
 BuildRequires:  python(abi)
+BuildRequires:  %pythons
 
 Packager:       Terra Packaging Team <terra@fyralabs.com>
 
