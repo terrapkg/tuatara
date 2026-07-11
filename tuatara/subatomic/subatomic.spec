@@ -31,19 +31,27 @@ Client for Subatomic repo manager
 
 %prep
 %autosetup
-go mod download
+go mod vendor
 
 
 %build
-%goprep %{import_path}
-%gobuild server
-%gobuild subatomic-cli
+%dnl %goprep %{import_path}
+%dnl %gobuild server
+%dnl %gobuild subatomic-cli
+go build -o out/subatomic -mod=vendor -buildmode=pie server
+go build -o out/subatomic-cli -mod=vendor -buildmode=pie subatomic-cli
 
 
 %install
-install -Dm755 go/bin/server %{buildroot}%{_bindir}/subatomic
-install -Dm755 go/bin/subatomic-cli %{buildroot}%{_bindir}/subatomic-cli
+#goinstall
+#gosrc
 
+install -Dm755 out/* -t %buildroot%_bindir
+
+#gofilelist
+
+%dnl %check
+%dnl %gotest %{import_path}
 
 %files
 %{_bindir}/subatomic
