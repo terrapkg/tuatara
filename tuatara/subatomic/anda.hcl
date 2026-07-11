@@ -1,4 +1,4 @@
-project pkg {
+project "" {
 	rpm {
 		spec = "subatomic.spec"
 	}
