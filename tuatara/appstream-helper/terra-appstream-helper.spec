@@ -35,6 +35,8 @@ Python files needed for %{name}.
 
 %install
 %pyproject_install
+install -Dpm644 terra-appstream.macros %buildroot%_rpmmacrodir/macros.terra-appstream
+
 
 %files
 %license LICENSE
