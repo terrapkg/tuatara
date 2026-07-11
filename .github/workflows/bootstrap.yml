@@ -44,7 +44,7 @@ jobs:
           autoAgreeWithLicenses = yes
           EOF
 
-          ./zy install -y wget git-core cargo podman fuse-overlayfs rpm-build util-linux
+          ./zy install -y wget git-core cargo podman fuse-overlayfs rpm-build util-linux '*-rpm-macros'
 
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
