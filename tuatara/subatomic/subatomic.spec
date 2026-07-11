@@ -1,4 +1,5 @@
 %define debug_package %{nil}
+%global import_path github.com/FyraLabs/subatomic
 
 Name:           subatomic
 Version:        0.15.0
@@ -36,15 +37,12 @@ go mod download
 %build
 %goprep %{import_path}
 %gobuild server
-mkdir -p build/bin
-go build -ldflags "-B 0x$(head -c20 /dev/urandom|od -An -tx1|tr -d ' \n') -s -w" -buildmode=pie -o build/bin/subatomic-cli ./subatomic-cli
-go build -ldflags "-B 0x$(head -c20 /dev/urandom|od -An -tx1|tr -d ' \n') -s -w" -buildmode=pie -o build/bin/subatomic ./server
+%gobuild subatomic-cli
 
 
 %install
-mkdir -p %{buildroot}%{_bindir}/
-install -pm 755 build/bin/subatomic-cli %{buildroot}%{_bindir}/
-install -pm 755 build/bin/subatomic %{buildroot}%{_bindir}/
+install -Dm755 go/bin/server %{buildroot}%{_bindir}/subatomic
+install -Dm755 go/bin/subatomic-cli %{buildroot}%{_bindir}/subatomic-cli
 
 
 %files

@@ -46,5 +46,4 @@ install -Dpm644 terra-appstream.macros %buildroot%_rpmmacrodir/macros.terra-apps
 
 
 %files -n python3-%{name}
-%{python_sitelib}/terra_appatream_helper*/
-%pycache_only %{python_sitelib}/__pycache__/*
+/usr/lib/python*/site-packages/terra_appstream_helper*
