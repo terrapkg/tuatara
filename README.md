@@ -2,7 +2,7 @@
 
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/terrapkg/tuarara/badge)](https://scorecard.dev/viewer/?uri=github.com/terrapkg/tuatara) 
 
-> [!WARN]
+> [!WARNING]
 > Tuatara currently only supports Tumbleweed and is experimental.
 
 ## Installation
