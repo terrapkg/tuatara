@@ -1,6 +1,15 @@
 # Tuatara
 
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/terrapkg/packages/badge)](https://scorecard.dev/viewer/?uri=github.com/terrapkg/packages) 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/terrapkg/tuarara/badge)](https://scorecard.dev/viewer/?uri=github.com/terrapkg/tuatara) 
+
+> [!WARN]
+> Tuatara currently only supports Tumbleweed and is experimental.
+
+## Installation
+
+```
+curl https://raw.githubusercontent.com/terrapkg/tuatara/refs/heads/tumbleweed/tuatara/release/tuatara.repo -o /etc/zypp/repos.d/tuatara.repo
+```
 
 ## Contributions
 
