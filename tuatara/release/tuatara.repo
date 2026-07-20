@@ -1,7 +1,7 @@
 [tuatara]
 name=Tuatara Tumbleweed
-#baseurl=https://repos.fyralabs.com/tuatara-tumbleweed
-metalink=https://tetsudou.fyralabs.com/metalink?repo=tuatara-tumbleweed&arch=$basearch
+baseurl=https://repos.fyralabs.com/tuatara-tumbleweed
+#metalink=https://tetsudou.fyralabs.com/metalink?repo=tuatara-tumbleweed&arch=$basearch
 metadata_expire=6h
 type=rpm
 gpgcheck=1
@@ -13,8 +13,8 @@ countme=1
 
 [tuatara-source]
 name=Tuatara Tumbleweed - Source
-#baseurl=https://repos.fyralabs.com/tuatara-tumbleweed-source
-metalink=https://tetsudou.fyralabs.com/metalink?repo=tuatara-tumbleweed-source&arch=$basearch
+baseurl=https://repos.fyralabs.com/tuatara-tumbleweed-source
+#metalink=https://tetsudou.fyralabs.com/metalink?repo=tuatara-tumbleweed-source&arch=$basearch
 metadata_expire=6h
 type=rpm
 gpgcheck=1
