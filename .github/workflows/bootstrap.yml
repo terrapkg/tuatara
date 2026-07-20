@@ -15,6 +15,9 @@ permissions:
   id-token: write
 on:
   workflow_dispatch:
+env:
+  ZYPP_PCK_PRELOAD: 1
+  ZYPP_CURL2: 1
 
 jobs:
   bootstrap:
@@ -30,9 +33,6 @@ jobs:
     steps:
       - name: Install repositories
         run: |
-          echo '#!/bin/sh' >> ./zy
-          echo 'env ZYPP_PCK_PRELOAD=1 ZYPP_CURL2=1 zypper $@' >> ./zy
-          chmod +x ./zy
           cat<<EOF > /etc/zypp/zypper.conf
           [download]
           max_concurrent_connections = 100
@@ -44,7 +44,7 @@ jobs:
           autoAgreeWithLicenses = yes
           EOF
 
-          ./zy install -y wget git-core cargo podman fuse-overlayfs rpm-build util-linux '*-rpm-macros'
+          zypper install -y wget git-core cargo podman fuse-overlayfs rpm-build util-linux '*-rpm-macros'
 
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
@@ -53,23 +53,20 @@ jobs:
       - name: Build anda-srpm-macros
         run: |
           # need to remake due to checkout
-          echo '#!/bin/sh' >> ./zy
-          echo 'env ZYPP_PCK_PRELOAD=1 ZYPP_CURL2=1 zypper $@' >> ./zy
-          chmod +x ./zy
           mkdir -p anda-build/rpm/rpms
           rpmbuild -bb tuatara/srpm-macros/*.spec --undefine=_disable_source_fetch -D "_sourcedir $(pwd)/tuatara/srpm-macros/" -D "_rpmdir $(pwd)/anda-build/rpm/rpms/"
           mv ./anda-build/rpm/rpms/*/anda-*.rpm ./anda-build/rpm/rpms/
-          ./zy install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/anda-*.rpm
+          zypper install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/anda-*.rpm
 
       - name: Install build dependencies
         run: |
-          ./zy install --allow-unsigned-rpm -y $(rpmspec -q tuatara/*/*.spec --buildrequires)
+          zypper install --allow-unsigned-rpm -y $(rpmspec -q tuatara/*/*.spec --buildrequires)
 
       - name: Install Anda
         run: |
           rpmbuild -bb tuatara/anda/*.spec --undefine=_disable_source_fetch -D "_sourcedir $(pwd)/tuatara/anda/" -D "_rpmdir $(pwd)/anda-build/rpm/rpms/"
           mv ./anda-build/rpm/rpms/*/anda-*.rpm ./anda-build/rpm/rpms/
-          ./zy install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/anda-0*.rpm
+          zypper install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/anda-0*.rpm
 
       # - name: Build tuatara-mock-configs
       #   run: |
@@ -78,7 +75,7 @@ jobs:
       #     git config --global --add safe.directory "$GITHUB_WORKSPACE"
       #     anda build -D "vendor Tuatara" -rrpmbuild tuatara/mock-configs
       # - name: Install tuatara-mock-configs
-      #   run: zy install --allow-unsigned-rpm -y anda-build/rpm/rpms/tuatara-mock-configs*.rpm
+      #   run: zypper install --allow-unsigned-rpm -y anda-build/rpm/rpms/tuatara-mock-configs*.rpm
 
       - name: Build tuatara-release
         run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/release
@@ -89,7 +86,7 @@ jobs:
       - name: Build Subatomic
         run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/subatomic
       - name: Install Subatomic
-        run: ./zy install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/subatomic-*.rpm
+        run: zypper install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/subatomic-*.rpm
 
       - name: Tidy up output directory
         run: rmdir anda-build/rpm/rpms/{noarch,aarch64,x86_64} | true
