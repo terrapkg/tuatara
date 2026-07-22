@@ -77,8 +77,11 @@ jobs:
       # - name: Install tuatara-mock-configs
       #   run: zypper install --allow-unsigned-rpm -y anda-build/rpm/rpms/tuatara-mock-configs*.rpm
 
-      - name: Build tuatara-release
-        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/release
+      - name: Build tuatara-repos
+        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/repos
+
+      - name: Build tuatara-build-key
+        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/build-key
 
       - name: Build tuatara-appstream-helper
         run: anda build -D "vendor Tuatara" -D "__python %{__python3}" -rrpmbuild tuatara/appstream-helper
