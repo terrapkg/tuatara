@@ -1,0 +1,9 @@
+project "" {
+	arches = ["x86_64"]
+	rpm {
+		spec = "anki-bin.spec"
+	}
+        labels {
+        subrepo = "extras"
+       }
+}
