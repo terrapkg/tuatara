@@ -1,0 +1,9 @@
+project "" {
+    rpm {
+        spec = "nvidia-persistenced.spec"
+    }
+    labels = {
+        subrepo = "nvidia"
+        weekly = 3
+    }
+}
