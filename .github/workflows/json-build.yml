@@ -32,6 +32,9 @@ on:
         required: false
         type: boolean
         default: true
+env:
+  ZYPP_PCK_PRELOAD: 1
+  ZYPP_CURL2: 1
 
 jobs:
   build:
@@ -60,10 +63,10 @@ jobs:
             anda run ${{ matrix.pkg.pkg }}/ci_setup.rhai --labels script_path=$dir/ci_setup.rhai
           fi
 
-      - name: Install Build Dependencies
+      - name: Install build dependencies
         if: ${{ matrix.pkg.labels.mock != '1' }}
         run: |
-          dnf5 builddep -y ${{ matrix.pkg.pkg }}/*.spec
+          zypper install --allow-unsigned-rpm -y $(rpmspec -q tuatara/*/*.spec --buildrequires)
 
       - name: Build with Andaman
         run: anda build -D "vendor Terra" -D "__python %{__python3}" ${{ matrix.pkg.pkg }} -c terra-${{ matrix.version }}-${{ matrix.pkg.arch }} ${{ !matrix.pkg.labels.mock == '1' && '-rrpmbuild' || '' }}
