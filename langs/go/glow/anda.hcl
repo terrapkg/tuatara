@@ -1,0 +1,5 @@
+project "" {
+  rpm {
+  	spec = "golang-github-charmbracelet-glow.spec"
+  }
+}
