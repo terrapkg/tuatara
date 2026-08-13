@@ -1,0 +1,193 @@
+%global real_name prismlauncher
+%global nice_name PrismLauncher
+%global appid org.prismlauncher.PrismLauncher
+
+# Change this variables if you want to use custom keys
+# Leave blank if you want to build Prism Launcher without MSA id or curseforge api key
+%define msa_id default
+%define curseforge_key default
+
+%global qt_version 6
+%global min_qt_version 6
+
+%global build_platform terra
+
+Name:             prismlauncher
+Version:          11.0.3
+Release:          1%{?dist}
+Summary:          Minecraft launcher with ability to manage multiple instances
+# see COPYING.md for more information
+# each file in the source also contains a SPDX-License-Identifier header that declares its license
+License:          GPL-3.0-only AND Apache-2.0 AND LGPL-3.0-only AND GPL-3.0-or-later AND GPL-2.0-or-later AND ISC AND OFL-1.1 AND LGPL-2.1-only AND MIT AND BSD-2-Clause-FreeBSD AND BSD-3-Clause AND LGPL-3.0-or-later
+Group:            Amusements/Games
+URL:              https://prismlauncher.org/
+Source0:          https://github.com/PrismLauncher/PrismLauncher/releases/download/%{version}/%{real_name}-%{version}.tar.gz
+
+BuildRequires:    cmake >= 3.15
+BuildRequires:    extra-cmake-modules
+BuildRequires:    gcc-c++
+# JDKs less than the most recent release & LTS are no longer in the default
+# Fedora repositories
+# Make sure you have Adoptium's repositories enabled
+# https://fedoraproject.org/wiki/Changes/ThirdPartyLegacyJdks
+# https://adoptium.net/installation/linux/#_centosrhelfedora_instructions
+BuildRequires:    temurin-17-jdk
+BuildRequires:    anda-srpm-macros
+BuildRequires:    desktop-file-utils
+BuildRequires:    libappstream-glib
+BuildRequires:    cmake(Qt%{qt_version}Concurrent) >= %{min_qt_version}
+BuildRequires:    cmake(Qt%{qt_version}Core) >= %{min_qt_version}
+BuildRequires:    cmake(Qt%{qt_version}Gui) >= %{min_qt_version}
+BuildRequires:    cmake(Qt%{qt_version}Network) >= %{min_qt_version}
+BuildRequires:    cmake(Qt%{qt_version}Test) >= %{min_qt_version}
+BuildRequires:    cmake(Qt%{qt_version}Widgets) >= %{min_qt_version}
+BuildRequires:    cmake(Qt%{qt_version}Xml) >= %{min_qt_version}
+BuildRequires:    cmake(Qt%{qt_version}NetworkAuth) >= %{min_qt_version}
+BuildRequires:    tomlplusplus-devel
+BuildRequires:    vulkan-headers
+BuildRequires:    pkgconfig(libqrencode)
+BuildRequires:    pkgconfig(libarchive)
+BuildRequires:    pkgconfig(gamemode)
+
+BuildRequires:    pkgconfig(libcmark)
+BuildRequires:    pkgconfig(scdoc)
+BuildRequires:    pkgconfig(zlib)
+
+Requires(post):   desktop-file-utils
+Requires(postun): desktop-file-utils
+
+Requires:         qt%{qt_version}-qtimageformats
+Requires:         qt%{qt_version}-qtsvg
+Requires:         javapackages-filesystem
+Recommends:       java-25-openjdk
+
+# xrandr needed for LWJGL [2.9.2, 3) https://github.com/LWJGL/lwjgl/issues/128
+Recommends:       xrandr
+# libflite needed for using narrator in minecraft
+Recommends:       flite
+
+# Prism supports enabling gamemode
+Suggests:         gamemode
+
+Obsoletes:        %{real_name}-qt5-nightly <= 9.4
+
+%description
+A custom launcher for Minecraft that allows you to easily manage
+multiple installations of Minecraft at once (Fork of MultiMC)
+
+
+%prep
+%autosetup -n PrismLauncher-%{version}
+
+# Do not set RPATH
+sed -i "s|\$ORIGIN/||" CMakeLists.txt
+
+%conf
+%cmake \
+  -DLauncher_QT_VERSION_MAJOR="%{qt_version}" \
+  -DLauncher_BUILD_PLATFORM="%{build_platform}" \
+  %if 0%{?fedora} > 41
+  -DLauncher_ENABLE_JAVA_DOWNLOADER=ON \
+  %endif
+  %if "%{msa_id}" != "default"
+  -DLauncher_MSA_CLIENT_ID="%{msa_id}" \
+  %endif
+  %if "%{curseforge_key}" != "default"
+  -DLauncher_CURSEFORGE_API_KEY="%{curseforge_key}" \
+  %endif
+  -DBUILD_TESTING=OFF \
+%if 0%{?fedora} > 43
+  -DCMAKE_CXX_FLAGS="$CXXFLAGS -Wno-error=sfinae-incomplete"
+%endif
+
+%build
+%cmake_build
+
+
+%install
+%cmake_install
+%terra_appstream
+
+%check
+%ctest
+
+
+%files
+%doc README.md
+%license LICENSE COPYING.md
+%dir %{_datadir}/%{nice_name}
+%{_bindir}/prismlauncher
+%{_datadir}/%{nice_name}/NewLaunch.jar
+%{_datadir}/%{nice_name}/JavaCheck.jar
+%{_datadir}/%{nice_name}/qtlogging.ini
+%{_datadir}/%{nice_name}/NewLaunchLegacy.jar
+%{_appsdir}/org.prismlauncher.PrismLauncher.desktop
+%{_scalableiconsdir}/org.prismlauncher.PrismLauncher.svg
+%{_hicolordir}/256x256/apps/org.prismlauncher.PrismLauncher.png
+%{_datadir}/mime/packages/org.prismlauncher.PrismLauncher.xml
+%{_datadir}/qlogging-categories%{qt_version}/prismlauncher.categories
+%{_mandir}/man?/prismlauncher.*
+%{_metainfodir}/org.prismlauncher.PrismLauncher.metainfo.xml
+
+
+%changelog
+* Tue Jan 06 2026 Owen Zimmerman <owen@fyralabs.com> - 10.0.0-1
+- Update to 10.0.0, remove Qt5 version
+
+* Sun Jun 23 2024 Trung Lê <8@tle.id.au> - 8.2-2
+- update to 8.4. Add quazip-qt deps
+
+* Wed Apr 03 2024 seth <getchoo at tuta dot io> - 8.2-2
+- move JREs to weak deps, add java 21 for snapshots
+
+* Wed Jul 26 2023 seth <getchoo at tuta dot io> - 7.2-2
+- remove terra-fractureiser-detector from recommends, use proper build platform
+
+* Thu Jun 08 2023 seth <getchoo@tuta.io> - 6.3-3
+- specify jdk 17 + cleanup outdated patches/scriptlets
+
+* Mon Mar 20 2023 seth <getchoo at tuta dot io> - 6.3-2
+- recommend flite to support narrator in minecraft
+
+* Sat Feb 04 2023 seth <getchoo at tuta dot io> - 6.3-1
+- update to 6.3
+
+* Mon Dec 19 2022 seth <getchoo at tuta dot io> - 6.1-2
+- start using non-headless java deps
+
+* Mon Dec 12 2022 seth <getchoo at tuta dot io> - 6.0-1
+- update to 6.0
+
+* Mon Dec 05 2022 seth <getchoo at tuta dot io> - 5.2-3
+- revise file to better follow fedora packaging guidelines and add java 8 as a
+  dependency
+
+* Tue Nov 15 2022 seth <getchoo at tuta dot io> - 5.2-2
+- use newer version of toml++ to fix issues on aarch64
+
+* Tue Nov 15 2022 seth <getchoo at tuta dot io> - 5.2-1
+- update to 5.2
+
+* Thu Nov 10 2022 seth <getchoo at tuta dot io> - 5.1-2
+- add package to Amusements/Games
+
+* Tue Nov 01 2022 seth <getchoo at tuta dot io> - 5.1-1
+- update to 5.1
+
+* Wed Oct 19 2022 seth <getchoo at tuta dot io> - 5.0-3
+- add missing deps and build with qt6 by default
+
+* Wed Oct 19 2022 seth <getchoo at tuta dot io> - 5.0-2
+- add change-jars-path.patch to allow for package-specific jar path
+
+* Wed Oct 19 2022 seth <getchoo at tuta dot io> - 5.0-1
+- update to version 5.0
+
+* Tue Oct 18 2022 Cappy Ishihara <cappy@cappuchino.xyz> - 1.4.2.git981e9cf-0.2.20221018.981e9cf
+- Update provides and obsoletes
+
+* Tue Oct 18 2022 seth <getchoo at tuta dot io> - 1.4.2.git981e9cf-0.1.20221018.981e9cf
+- start using qt6
+
+* Tue Oct 18 2022 Cappy Ishihara <cappy@cappuchino.xyz> - 1.4.2-1
+- Repackaged as Prism Launcher

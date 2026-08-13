@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Minecraft Launcher
+Comment=Official Minecraft Launcher
+Exec=/usr/bin/minecraft-launcher
+Icon=com.mojang.Minecraft
+Terminal=false
+Categories=Game

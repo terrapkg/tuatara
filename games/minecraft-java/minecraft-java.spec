@@ -1,0 +1,155 @@
+%global debug_package %{nil}
+
+%global appid com.mojang.Minecraft
+%global developer Mojang Studios
+%global org com.mojang
+
+Name:		minecraft-launcher
+Version:	2.3.2
+Release:	4%{?dist}
+Summary:	Official launcher for Minecraft
+
+License:	https://www.minecraft.net/en-us/eula
+URL:		https://minecraft.net
+Source0:	https://launcher.mojang.com/download/Minecraft.tar.gz
+Source1:	minecraft-launcher.desktop
+Source2:	https://launcher.mojang.com/download/minecraft-launcher.svg
+Source3:	com.mojang.Minecraft.metainfo.xml
+Packager:   Cappy Ishihara <cappy@fyralabs.com>
+
+ExclusiveArch:	x86_64
+
+BuildRequires: terra-appstream-helper anda-srpm-macros desktop-file-utils
+Requires:	java >= 1.8.0
+Requires:       gtk3
+Requires:       libgpg-error
+Requires:       (gnome-keyring or kf6-kwallet or kf5-kwallet or kwallet)
+
+%description
+The official Linux release of the launcher for Minecraft, a game about placing blocks and going on adventures.
+
+%prep
+%autosetup -n minecraft-launcher
+
+%build
+
+%install
+install -Dm755 %{_builddir}/minecraft-launcher/minecraft-launcher %{buildroot}%{_bindir}/minecraft-launcher
+install -Dm644 %{SOURCE1} %{buildroot}%{_appsdir}/%{appid}.desktop
+install -Dm644 %{SOURCE2} %{buildroot}%{_scalableiconsdir}/%{appid}.svg
+
+%terra_appstream -o %{SOURCE3}
+cat %{buildroot}%{_metainfodir}/%{appid}.metainfo.xml
+
+%check
+desktop-file-validate %{buildroot}%{_appsdir}/%{appid}.desktop
+
+%files
+%{_bindir}/minecraft-launcher
+%{_appsdir}/%{appid}.desktop
+%{_scalableiconsdir}/%{appid}.svg
+%{_metainfodir}/%{appid}.metainfo.xml
+
+%changelog
+* Tue Mar 08 2022 Thomas Batten <stenstorpmc@gmail.com> - 1121-2
+- Moved minecraft-launcher into bindir
+
+* Mon Mar 07 2022 Thomas Batten <stenstorpmc@gmail.com> - 1121-1
+- Updated to version 1121
+
+* Sat Nov 27 2021 Thomas Batten <stenstorpmc@gmail.com> - 928-1
+- Updated to version 928
+
+* Tue Mar 02 2021 Thomas Batten <stenstorpmc@gmail.com> - 887-1
+- Updated to version 887
+- Adjust install procedure for new packaging method
+
+* Tue Feb 23 2021 Thomas Batten <stenstorpmc@gmail.com> - 2.2.1867-1
+- Updated to version 2.2.1867
+
+* Wed Feb 03 2021 Thomas Batten <stenstorpmc@gmail.com> - 2.2.1441-1
+- Updated to version 2.2.1441
+
+* Tue Jan 26 2021 Thomas Batten <stenstorpmc@gmail.com> - 2.2.1262-1
+- Updated to version 2.2.1262
+
+* Thu Dec 10 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.2.909-1
+- Updated to version 2.2.909
+
+* Tue Dec 01 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.2.741-1
+- Updated to version 2.2.741
+
+* Wed Oct 21 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.17785-1
+- Updated to version 2.1.17785
+
+* Wed Sep 23 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.17627-1
+- Updated to version 2.1.17627
+
+* Wed Sep 02 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.17417-1
+- Updated to version 2.1.17417
+
+* Wed Jul 22 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.16102-1
+- Updated to version 2.1.16102
+
+* Sat Jul 04 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.15852-1
+- Updated to version 2.1.15852
+
+* Mon Jun 08 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.15166-1
+- Updated to version 2.1.15166
+
+* Thu May 28 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.14947-1
+- Updated to version 2.1.14947
+
+* Tue May 26 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.14930-1
+- Updated to version 2.1.14930
+
+* Thu May 21 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.14403-1
+- Updated to version 2.1.14403
+
+* Sat Apr 18 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.13829-1
+- Updated to version 2.1.13829
+
+* Thu Apr 02 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.13509-1
+- Updated to version 2.1.13509
+
+* Fri Mar 20 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.13086-1
+- Updated to version 2.1.13086
+
+* Tue Mar 17 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.12872-1
+- Updated to version 2.1.12872
+
+* Tue Mar 03 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.12464-1
+- Updated to version 2.1.12464
+
+* Mon Feb 24 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.12308-1
+- Updated to version 2.1.12308
+
+* Sat Jan 25 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.11314-1
+- Updated to version 2.1.11314
+- use install instead of cp for desktop and icon files
+
+* Fri Jan 24 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.11290-1
+- Updated to version 2.1.11290
+
+* Fri Jan 17 2020 Thomas Batten <stenstorpmc@gmail.com> - 2.1.10835-1
+- Updated to version 2.1.10835
+
+* Thu Nov 14 2019 Thomas Batten <stenstorpmc@gmail.com> - 2.1.9618-1
+- Updated to version 2.1.9618
+- Use official minecraft-launcher.svg
+
+* Wed Jun 26 2019 Thomas Batten <stenstorpmc@gmail.com> - 2.1.5320-1
+- Updated to version 2.1.5320
+
+* Thu Apr 25 2019 Thomas Batten <stenstorpmc@gmail.com> - 2.1.3676-1
+- Updated to version 2.1.3676
+
+* Tue Feb 26 2019 Thomas Batten <stenstorpmc@gmail.com> - 2.1.2482-1
+- Updated to version 2.1.2482
+- Re-jig install section
+
+* Mon Feb 25 2019 Thomas Batten <stenstorpmc@gmail.com> - 2.1.2472-1
+- Updated to version 2.1.2472
+
+* Sun Nov 25 2018 Thomas Batten <stenstorpmc@gmail.com> - 2.1.1431-1
+- Initial build using version 2.1.1431
