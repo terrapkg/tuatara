@@ -20,7 +20,6 @@ Source0:        https://github.com/WeirdTreeThing/cros-keyboard-map/archive/%{tr
 Source1:        https://github.com/Ultramarine-Linux/cros-keyboard-map/archive/%{um_commit}/cros-keyboard-map-%{um_commit}.tar.gz
 
 %{?systemd_requires}
-BuildRequires:  systemd-rpm-macros
 Requires:       keyd python3 python3-libfdt
 
 Packager:       Owen Zimmerman <owen@fyralabs.com>

@@ -8,7 +8,6 @@ Summary:        A collection of Pygments styles
 License:        BSD-3-Clause
 URL:            https://pygments-styles.org
 Source0:        %{pypi_source}
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)

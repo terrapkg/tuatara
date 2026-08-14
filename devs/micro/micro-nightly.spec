@@ -41,7 +41,6 @@ License:        MIT
 URL:            %{gourl}
 Packager:       sadlerm <lerm@chromebooks.lol>
 
-BuildRequires:  anda-srpm-macros
 
 Recommends:     wl-clipboard
 Recommends:     (xclip or xsel)

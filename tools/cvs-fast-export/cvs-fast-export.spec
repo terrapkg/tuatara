@@ -10,7 +10,6 @@ Packager:       Olivia <git@olivia.sh>
 
 BuildRequires:  make
 BuildRequires:  asciidoctor
-BuildRequires:  go-rpm-macros
 
 ExclusiveArch:  %{golang_arches_future}
 

@@ -11,7 +11,6 @@ Source0:	https://download.kde.org/stable/liquidshell/liquidshell-%version.tar.xz
 BuildRequires:	cmake
 BuildRequires:	libappstream-glib
 BuildRequires:	pkgconfig(Qt5)
-BuildRequires:	kf5-rpm-macros
 BuildRequires:	extra-cmake-modules
 BuildRequires:	pkgconfig(Qt5X11Extras)
 BuildRequires:	qt5-qtbase-private-devel

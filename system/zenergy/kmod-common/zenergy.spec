@@ -11,7 +11,6 @@ URL:            https://github.com/BoukeHaarsma23/zenergy
 Source0:        %{url}/archive/%{commit}.tar.gz#/%{name}-%{shortcommit}.tar.gz
 Source1:        com.github.zenergy.metainfo.xml
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 Requires:       %{name}-kmod = %{?epoch:%{epoch}:}%{version}
 Provides:       %{name}-kmod-common = %{?epoch:%{epoch}:}%{version}
 BuildArch:      noarch

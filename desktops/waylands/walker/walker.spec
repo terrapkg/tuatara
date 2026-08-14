@@ -22,7 +22,6 @@ Source:         %url/archive/refs/tags/%upstream_version.tar.gz
 Packager:       madonuko <mado@fyralabs.com>
 Requires:       elephant
 
-BuildRequires:  cargo-rpm-macros >= 26
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(gtk4-layer-shell-0)
 BuildRequires:  pkgconfig(cairo)

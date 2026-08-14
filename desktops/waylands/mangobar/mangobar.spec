@@ -12,7 +12,6 @@ SourceLicense:  GPL-3.0-or-later
 License:        %{sourcelicense} AND (Apache-2.0 OR MIT) AND MIT AND GPL-3.0 AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT) AND Apache-2.0 AND (Unlicense OR MIT)
 
 BuildRequires:  rust
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  gtk4
 BuildRequires:  gtk4-devel
 BuildRequires:  gtk4-layer-shell

@@ -12,7 +12,7 @@ Patch0:         https://github.com/terrapkg/pkg-joycond/raw/refs/heads/main/0001
 Patch1:         https://github.com/terrapkg/pkg-joycond/raw/refs/heads/main/0001-Change-permissions-for-hidraw-access.patch
 Packager:       Cappy Ishihara <cappy@fyralabs.com>
 BuildRequires:  libevdev-devel libudev-devel
-BuildRequires:  cmake make systemd-rpm-macros gcc-c++
+BuildRequires:  cmake make gcc-c++
 
 %description
 joycond is a linux daemon which uses the evdev devices provided by hid-nintendo

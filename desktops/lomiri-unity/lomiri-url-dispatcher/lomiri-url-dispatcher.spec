@@ -11,7 +11,6 @@ License:        LGPL-3.0
 URL:            https://gitlab.com/ubports/development/core/lomiri-url-dispatcher
 Source0:        %{url}/-/archive/%commit/lomiri-url-dispatcher-%commit.tar.gz
 
-BuildRequires: systemd-rpm-macros
 BuildRequires: cmake
 BuildRequires: cmake-extras
 BuildRequires: pkgconfig

@@ -15,7 +15,6 @@ Source:         %{terra_crates_source}
 
 ExclusiveArch:  %{rust_arches}
 
-BuildRequires:  anda-srpm-macros
 BuildRequires:  rust-packaging
 BuildRequires:  openssl-devel
 BuildRequires:  gcc

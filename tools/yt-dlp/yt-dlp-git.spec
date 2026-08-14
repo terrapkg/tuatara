@@ -25,7 +25,6 @@ BuildRequires:  %{py3_dist pytest}
 BuildRequires:  pandoc
 BuildRequires:  make
 
-BuildRequires:  anda-srpm-macros
 
 # ffmpeg-free is now available in Fedora.
 Recommends:     /usr/bin/ffmpeg

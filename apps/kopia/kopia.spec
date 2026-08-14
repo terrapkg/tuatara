@@ -16,7 +16,6 @@ Patch0:         fix-electron-output-dir.patch
 ExclusiveArch:  %{golang_arches_future}
 Packager:       Olivia <git@olivia.sh>
 
-BuildRequires:  go-rpm-macros
 BuildRequires:  terra-appstream-helper
 
 %global gui_name %{name}-ui

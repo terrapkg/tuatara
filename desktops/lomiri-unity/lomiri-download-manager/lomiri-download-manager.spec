@@ -10,7 +10,6 @@ License:    LGPLv3
 URL:        https://gitlab.com/ubports/development/core/lomiri-download-manager
 Source0:    %{url}/-/archive/%commit/lomiri-download-manager-%commit.tar.gz
 
-BuildRequires: systemd-rpm-macros
 BuildRequires: boost-devel
 BuildRequires: cmake
 BuildRequires: cmake-extras

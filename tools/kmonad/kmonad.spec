@@ -11,7 +11,6 @@ Source0:        https://github.com/%{name}/%{name}/archive/%{version}.tar.gz
 
 BuildRequires:  gcc-c++
 BuildRequires:  ghc-Cabal-devel
-BuildRequires:  ghc-rpm-macros
 
 BuildRequires:  ghc-base-prof
 BuildRequires:  ghc-cereal-prof
@@ -23,7 +22,6 @@ BuildRequires:  ghc-resourcet-prof
 BuildRequires:  ghc-rio-prof
 BuildRequires:  ghc-unliftio-devel
 
-BuildRequires:  systemd-rpm-macros
 
 Packager:       sadlerm <sad_lerm@hotmail.com>
 

@@ -9,7 +9,6 @@ Summary:          Modprobe config to enable the amdgpu drivers on Southern Islan
 License:          GPL-3.0-only
 URL:              https://github.com/terrapkg/pkg-si-cik-amdgpu
 Source0:          %{url}/archive/%{commit}.tar.gz#/%{name}-%{shortcommit}.tar.gz
-BuildRequires:    systemd-rpm-macros
 Requires(post):   dracut
 Requires(postun): dracut
 BuildArch:        noarch

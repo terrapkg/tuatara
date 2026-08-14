@@ -9,7 +9,7 @@ Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 
 Packager:       Owen Zimmerman <owen@fyralabs.com>
 
-BuildRequires:  make gcc systemd-rpm-macros
+BuildRequires:  make gcc
 
 %description
 %{summary}.

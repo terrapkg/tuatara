@@ -13,7 +13,6 @@ Summary:       xpad driver with support for XBox One controllers removed
 URL:           https://github.com/Jan200101/xpad-noone
 Source0:       %{url}/archive/%{commit}/%{name}-%{commit}.tar.gz#/%{name}-%{shortcommit}.tar.gz
 BuildRequires: sed
-BuildRequires: systemd-rpm-macros
 Provides:      %{name}-kmod-common = %{?epoch:%{epoch}:}%{version}
 Requires:      (akmod-%{name} = %{?epoch:%{epoch}:}%{version} or dkms-%{name} = %{?epoch:%{epoch}:}%{version})
 Conflicts:     xow <= 0.5

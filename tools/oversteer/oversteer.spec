@@ -21,7 +21,6 @@ BuildRequires:  python3-matplotlib
 BuildRequires:  python3-scipy
 BuildRequires:  python3-numpy
 BuildRequires:  gettext
-BuildRequires:  systemd-rpm-macros
 
 # None of these are detected as required dependencies
 Requires:  python3-gobject

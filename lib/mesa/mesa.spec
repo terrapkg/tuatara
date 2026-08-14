@@ -188,7 +188,6 @@ BuildRequires:  bindgen
 %if 0%{?rhel}
 BuildRequires:  rust-toolset
 %else
-BuildRequires:  cargo-rpm-macros
 %endif
 %endif
 %if 0%{?with_opencl}

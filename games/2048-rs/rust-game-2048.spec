@@ -12,7 +12,7 @@ License:        MIT
 URL:            https://crates.io/crates/game-2048
 Source:         %{terra_crates_source}
 
-BuildRequires:  anda-srpm-macros rust-packaging >= 21
+BuildRequires:  rust-packaging >= 21
 
 %global _description %{expand:
 Cli implementation of the popular 2048 game writen in rust.}

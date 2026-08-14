@@ -10,7 +10,6 @@ Summary:        Animated desktop wallpapers for COSMIC — play any video or GIF
 URL:            https://www.franz-e.net/cosmic-ext-flux/
 Source0:        https://github.com/franz-net/cosmic-ext-flux/archive/refs/tags/v%{version}.tar.gz
 Source1:        %{appid}.metainfo.xml
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  wayland-devel
 BuildRequires:  gstreamer1-plugins-base-devel
 BuildRequires:  pkgconfig(xkbcommon)

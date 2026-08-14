@@ -14,8 +14,6 @@ Source:         %{terra_crates_source}
 Source1:        https://raw.githubusercontent.com/jdx/usage/refs/tags/v%version/LICENSE
 Packager:       madonuko <mado@fyralabs.com>
 
-BuildRequires:  cargo-rpm-macros >= 24
-
 %global _description %{expand:
 CLI for working with usage-based CLIs.}
 

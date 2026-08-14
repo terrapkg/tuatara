@@ -34,7 +34,6 @@ BuildRequires:  %{_bindir}/pod2html
 BuildRequires:  gettext
 BuildRequires:  pam-devel
 BuildRequires:  httpd-devel
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  autoconf-archive
 BuildRequires:  gawk
 BuildRequires:  which

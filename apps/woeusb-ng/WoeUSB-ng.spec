@@ -9,7 +9,7 @@ Source:         https://github.com/WoeUSB/WoeUSB-ng/archive/refs/tags/v%version.
 Patch0:         https://patch-diff.githubusercontent.com/raw/WoeUSB/WoeUSB-ng/pull/79.patch
 BuildArch:      noarch
 Requires:       python3-%{name} = %{evr}
-BuildRequires:  anda-srpm-macros python3-devel python3-installer pyproject-rpm-macros python3dist(pip) python3dist(setuptools) python3dist(termcolor) python3dist(wxpython) python3dist(wheel)
+BuildRequires:  python3-devel python3-installer python3dist(pip) python3dist(setuptools) python3dist(termcolor) python3dist(wxpython) python3dist(wheel)
 
 %global _description %{expand:
 WoeUSB-ng is a simple tool that enable you to create your own usb stick windows installer from an iso image or a real DVD. This is a rewrite of original WoeUSB.}

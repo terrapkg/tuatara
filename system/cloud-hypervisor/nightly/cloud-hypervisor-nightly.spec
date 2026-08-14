@@ -10,7 +10,6 @@ Summary:        A Virtual Machine Monitor for modern Cloud workloads
 URL:            https://github.com/cloud-hypervisor/cloud-hypervisor
 Source0:        %{url}/archive/%{commit}/cloud-hypervisor-%{commit}.tar.gz
 BuildRequires:  perl
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  pkgconfig(openssl)
 Conflicts:      cloud-hypervisor
 

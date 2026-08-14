@@ -20,7 +20,6 @@ License:        MIT
 URL:            %{gourl}
 Source:         %{gosource}
 
-BuildRequires:  anda-srpm-macros
 BuildRequires:  git-core
 
 Packager:       sadlerm <lerm@chromebooks.lol>

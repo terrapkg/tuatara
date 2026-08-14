@@ -17,7 +17,6 @@ BuildRequires:  meson
 BuildRequires:  ninja-build
 BuildRequires:  gcc
 BuildRequires:  git
-BuildRequires:  anda-srpm-macros
 Requires:       PackageKit
 Requires:       bootc
 

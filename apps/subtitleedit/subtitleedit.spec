@@ -12,7 +12,7 @@ Source1:        https://github.com/SubtitleEdit/subtitleedit/blob/%version/src/l
 Packager:       madonuko <mado@fyralabs.com>
 Provides:       %realname = %evr
 Conflicts:      %realname
-BuildRequires:  unzip anda-srpm-macros
+BuildRequires:  unzip
 Requires:       dejavu-sans-mono-fonts mono-core
 
 %description

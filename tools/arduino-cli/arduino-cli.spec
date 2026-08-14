@@ -19,7 +19,6 @@ Packager:       Owen Zimmerman <owen@fyralabs.com>
 
 URL:            %{gourl}
 Source:         %{gosource}
-BuildRequires:  anda-srpm-macros
 
 %description %{common_description}
 

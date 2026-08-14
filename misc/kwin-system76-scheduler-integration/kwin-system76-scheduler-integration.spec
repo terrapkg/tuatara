@@ -15,7 +15,6 @@ URL:        %forgeurl
 Source0:    %forgesource
 Source1:    com.system76.Scheduler.dbusproxy.service
 Requires:   bash dbus-tools system76-scheduler kde-cli-tools systemd kf6-kconfig
-BuildRequires: systemd-rpm-macros
 # We require the Qt 4 package to provide the `qdbus` command
 Requires:   qt
 %description

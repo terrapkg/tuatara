@@ -14,7 +14,6 @@ BuildRequires: intltool
 BuildRequires: make
 BuildRequires: gcc
 BuildRequires: g++
-BuildRequires: systemd-rpm-macros
 BuildRequires: gsettings-desktop-schemas-devel
 BuildRequires: pkgconfig(lcms2)
 BuildRequires: libnotify-devel

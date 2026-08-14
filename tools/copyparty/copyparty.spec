@@ -8,7 +8,6 @@ URL:            https://github.com/9001/copyparty
 Source0:        %{pypi_source}
 License:        MIT
 # For EVR macro
-BuildRequires:  anda-srpm-macros
 BuildRequires:  python3-devel python3-pip pyproject-rpm-macros
 BuildRequires:  python3dist(wheel) python3dist(build) python3dist(jinja2)
 BuildRequires:  python3dist(setuptools) python3dist(installer)

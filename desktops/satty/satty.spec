@@ -4,7 +4,6 @@ Release:        1%{?dist}
 Summary:        Modern screenshot annotation tool
 URL:            https://github.com/Satty-org/Satty
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  libadwaita-devel
 BuildRequires:  libepoxy-devel
 SourceLicense:  MPL-2.0

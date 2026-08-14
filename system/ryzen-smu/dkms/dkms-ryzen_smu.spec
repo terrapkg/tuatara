@@ -12,7 +12,6 @@ License:        GPL-2.0-only
 URL:            https://github.com/amkillam/ryzen_smu
 Source:         %{url}/archive/%{commit}.tar.gz
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 Requires:       %{modulename} = %{?epoch:%{epoch}:}%{version}
 Provides:       %{name}-kmod-common = %{?epoch:%{epoch}:}%{version}
 BuildArch:      x86_64

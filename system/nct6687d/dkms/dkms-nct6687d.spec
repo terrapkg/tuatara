@@ -13,7 +13,6 @@ URL:            https://github.com/Fred78290/%{modulename}
 Source0:        %{url}/archive/%{commit}.tar.gz#/%{name}-%{shortcommit}.tar.gz
 Patch0:         dkms-version.patch
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 Requires:       %{modulename} = %{?epoch:%{epoch}:}%{version}
 Requires:       dkms
 Conflicts:      akmod-%{modulename}

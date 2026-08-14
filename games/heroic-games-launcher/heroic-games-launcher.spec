@@ -13,7 +13,6 @@ Release:       1%{?dist}
 Summary:       A games launcher for GOG, Amazon, and Epic Games
 License:       GPL-3.0-only AND MIT AND BSD-3-Clause
 URL:           https://heroicgameslauncher.com
-BuildRequires: anda-srpm-macros
 BuildRequires: pnpm
 BuildRequires: openjpeg-tools
 Requires:      alsa-lib

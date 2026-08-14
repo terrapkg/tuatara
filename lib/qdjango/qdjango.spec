@@ -8,7 +8,6 @@ Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 Patch0:     https://sources.debian.org/data/main/q/qdjango/0.6.2-3.3/debian/patches/disable_hash_tests.patch
 Patch1:     https://sources.debian.org/data/main/q/qdjango/0.6.2-3.3/debian/patches/fix_gcc6_ftbfs.patch
 
-BuildRequires: qt5-rpm-macros
 BuildRequires: qt5-qtbase-devel
 BuildRequires: cmake
 BuildRequires: gcc-c++

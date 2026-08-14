@@ -12,7 +12,6 @@ BuildRequires:    gcc
 BuildRequires:    libtirpc-devel
 BuildRequires:    m4
 BuildRequires:    sed
-BuildRequires:    systemd-rpm-macros
 Requires:         nvidia-driver-common%{?_isa} >= %{?epoch:%{epoch}:}%{version}
 Requires(post):   systemd
 Requires(preun):  systemd

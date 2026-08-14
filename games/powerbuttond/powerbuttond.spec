@@ -9,7 +9,6 @@ License:        BSD-2-clause
 URL:            https://gitlab.steamos.cloud/holo/powerbuttond
 Source:		    %{url}/-/archive/v%{version}/powerbuttond-v%{version}.tar.gz
 Packager:       madonuko <mado@fyralabs.com>
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(libevdev)
 BuildRequires:  make gcc

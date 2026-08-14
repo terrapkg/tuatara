@@ -10,7 +10,6 @@ Summary:        Bash kernel for Jupyter
 License:        BSD-3-Clause
 URL:            https://github.com/takluyver/bash_kernel
 Source:         %{pypi_source}
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(filetype)
 BuildRequires:  python3dist(flit-core)

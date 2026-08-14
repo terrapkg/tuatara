@@ -6,8 +6,6 @@ License:       MPL-2.0 AND MIT AND (Apache-2.0 OR MIT) AND Apache-2.0 AND (BSD-2
 URL:           https://github.com/rust-lang/mdBook
 Source0:       %url/archive/refs/tags/v%{version}.tar.gz
 
-BuildRequires: anda-srpm-macros
-BuildRequires: cargo-rpm-macros
 BuildRequires: gcc
 BuildRequires: cargo
 BuildRequires: mold

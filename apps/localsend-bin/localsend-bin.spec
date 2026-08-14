@@ -43,7 +43,6 @@ ExclusiveArch:  x86_64 aarch64
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  patchelf
-BuildRequires:  anda-srpm-macros
 BuildRequires:  terra-appstream-helper
 
 Requires:       libayatana-appindicator-gtk3

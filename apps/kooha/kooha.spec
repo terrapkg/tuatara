@@ -9,7 +9,6 @@ SourceLicense:  GPL-3.0-or-later
 License:        %{sourcelicense} OR (Apache-2.0 OR MIT) AND (Apache-2.0 OR BSL-1.0) AND MIT AND MPL-2.0 AND (Unlicense OR MIT)
 
 BuildRequires:  cargo
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  meson
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gtk4)

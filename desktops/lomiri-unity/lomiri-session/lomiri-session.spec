@@ -16,7 +16,6 @@ BuildRequires: gcc-c++
 BuildRequires: pkgconfig(libsystemd)
 BuildRequires: inotify-tools
 BuildRequires: lomiri
-BuildRequires: systemd-rpm-macros
 Recommends:    libayatana-common
 Requires:      dbus-common
 Requires:      inotify-tools

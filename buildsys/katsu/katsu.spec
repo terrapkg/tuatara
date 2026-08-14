@@ -28,7 +28,6 @@ License:        (0BSD OR MIT OR Apache-2.0) AND Apache-2.0 AND (Apache-2.0 OR BS
 URL:            https://github.com/FyraLabs/katsu
 Source0:		%url/archive/refs/tags/v%version.tar.gz
 
-BuildRequires:  anda-srpm-macros cargo-rpm-macros >= 26
 Requires:		xorriso dracut limine grub2 systemd-devel squashfs-tools parted gdisk
 Requires:		dracut-live dracut-config-rescue grub2-tools-extra dracut-squash
 BuildRequires:	cargo rust-packaging pkgconfig(libudev) clang-devel mold

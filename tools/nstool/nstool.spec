@@ -14,7 +14,6 @@ URL:            https://github.com/jakcron/nstool
 Packager:       sadlerm <lerm@chromebooks.lol>
 
 BuildRequires:  make gcc gcc-c++
-BuildRequires:  anda-srpm-macros
 
 %description
 General purpose reading/extraction tool for Nintendo Switch file formats.

@@ -12,7 +12,6 @@ License:        GPL-2.0
 URL:            https://github.com/BoukeHaarsma23/zenergy
 Source0:        %{url}/archive/%{commit}.tar.gz#/%{name}-%{shortcommit}.tar.gz
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 Requires:       %{modulename} = %{?epoch:%{epoch}:}%{version}
 Provides:       %{name}-kmod-common = %{?epoch:%{epoch}:}%{version}
 BuildArch:      x86_64

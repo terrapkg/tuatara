@@ -8,7 +8,6 @@ License:        (BSD-3-Clause OR MIT OR Apache-2.0) AND Apache-2.0 AND MIT AND (
 Summary:        A COSMIC applet for displaying CPU/Memory/Network/Disk/GPU usage in the Panel or Dock
 URL:            https://github.com/cosmic-utils/minimon-applet
 Source0:        %{url}/archive/refs/tags/v1.1.2.tar.gz
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  wayland-devel
 BuildRequires:  gstreamer1-plugins-base-devel
 BuildRequires:  pkgconfig(xkbcommon)

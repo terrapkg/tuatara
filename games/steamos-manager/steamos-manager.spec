@@ -5,8 +5,6 @@ Summary:        SteamOS Manager is a system daemon that aims to abstract Steam's
 License:        MIT AND (MIT OR Apache-2.0) AND Unicode-3.0 AND Apache-2.0 OR BSL-1.0 AND Apache-2.0 OR MIT AND Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT AND BSD-3-Clause OR MIT OR Apache-2.0 AND ISC AND LGPL-2.1 OR MIT OR Apache-2.0 AND MIT AND MIT OR Apache-2.0 AND MIT OR Apache-2.0 OR LGPL-2.1-or-later AND Unlicense OR MIT AND Zlib OR Apache-2.0 OR MIT
 URL:            https://gitlab.steamos.cloud/holo/steamos-manager
 Source0:        %url/-/archive/v%version/steamos-manager-v%version.tar.gz
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  clang-devel
 BuildRequires:  rust
 BuildRequires:  mold

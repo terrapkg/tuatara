@@ -8,8 +8,6 @@ Summary:        Command line interface for building Tauri apps
 License:        Apache-2.0 OR MIT
 URL:            https://crates.io/crates/create-tauri-app
 Source:         %{terra_crates_source}
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  mold
 Suggests:       libayatana-appindicator-gtk3
 Packager:       Gilver E. <roachy@fyralabs.com>

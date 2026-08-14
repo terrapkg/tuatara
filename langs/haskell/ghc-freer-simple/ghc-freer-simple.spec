@@ -20,7 +20,6 @@ Source1:        https://hackage.haskell.org/package/%{pkgver}/%{pkg_name}.cabal#
 # End cabal-rpm sources
 
 # Begin cabal-rpm deps:
-BuildRequires:  ghc-rpm-macros
 BuildRequires:  ghc-Cabal-devel
 BuildRequires:  ghc-base-devel
 BuildRequires:  ghc-natural-transformation-devel

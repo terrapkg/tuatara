@@ -21,7 +21,7 @@ Packager: Cappy Ishihara <cappy@fyralabs.com>
 # This package can be built using a newer .NET SDK version, but you
 # specifically need .NET 8.0 to run it.
 BuildRequires: dotnet-sdk-%{dotnet_sdk_version}
-BuildRequires: git jq systemd-rpm-macros
+BuildRequires: git jq
 BuildRequires: gtk3-devel
 
 Requires: dotnet-runtime-%{dotnet_runtime_version}

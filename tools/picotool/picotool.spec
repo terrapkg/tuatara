@@ -11,7 +11,6 @@ URL:            https://github.com/raspberrypi/picotool
 Source0:        https://github.com/raspberrypi/picotool/archive/refs/tags/%ver.tar.gz
 Source1:        https://github.com/raspberrypi/pico-sdk/archive/%sdk_version.tar.gz#/pico-sdk-%sdk_version.tar.gz
 BuildRequires:  cmake g++ libusb1-devel
-BuildRequires:  systemd-rpm-macros
 
 Packager:       Owen Zimmerman <owen@fyralabs.com>
 

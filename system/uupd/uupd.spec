@@ -6,8 +6,6 @@ License:        Apache-2.0
 URL:            https://github.com/ublue-os/uupd
 Source0:        %url/archive/refs/tags/v%version.tar.gz
 BuildRequires:  golang
-BuildRequires:  go-rpm-macros
-BuildRequires:  systemd-rpm-macros
 Recommends:     bootc
 Packager:       Tulip Blossom <tulilirockz@outlook.com>
 

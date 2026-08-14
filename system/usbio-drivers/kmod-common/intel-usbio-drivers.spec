@@ -10,7 +10,6 @@ Summary:       Common files for the USBIO drivers
 License:       GPL-2.0-only
 URL:           https://github.com/intel/usbio-drivers
 Source0:       %{url}/archive/%{commit}.tar.gz#/usbio-drivers-%{shortcommit}.tar.gz
-BuildRequires: anda-srpm-macros
 Provides:      intel-usbio-kmod-common = %{evr}
 Requires:      intel-ipu6-kmod-common
 BuildArch:     noarch

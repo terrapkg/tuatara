@@ -26,7 +26,6 @@ BuildRequires:  deno
 # OpenSSL 4.0. openssl3-devel provides openssl-devel and conflicts with >= 4.0,
 # so it replaces the default. Drop this once openssl-sys supports OpenSSL 4.
 BuildRequires:  openssl3-devel
-BuildRequires:  anda-srpm-macros
 BuildRequires:  terra-appstream-helper
 # Detected from src-tauri/Cargo.lock
 BuildRequires:  glib2-devel

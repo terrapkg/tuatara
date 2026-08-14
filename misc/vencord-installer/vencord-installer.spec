@@ -32,9 +32,6 @@ Source1:        %appid.metainfo.xml
 Source2:        dev.vencord.Installer.desktop
 Source3:        dev.vencord.Installer.policy
 
-BuildRequires:  go-rpm-macros
-BuildRequires:  go-srpm-macros
-BuildRequires:  anda-srpm-macros
 BuildRequires:  gcc-c++
 BuildRequires:  pkg-config
 BuildRequires:  libGL-devel

@@ -17,7 +17,6 @@ License:       GPL-2.0-only
 URL:           https://github.com/morrownr/8821cu-20210916
 Source0:       %{url}/archive/%{commit}.tar.gz#/%{git_name}-%{shortcommit}.tar.gz
 BuildRequires: kmodtool
-BuildRequires: systemd-rpm-macros
 Requires:      %{modulename}-kmod-common = %{version}
 Requires:      akmods
 Conflicts:     dkms-%{modulename}

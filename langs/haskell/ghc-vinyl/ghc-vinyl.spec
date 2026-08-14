@@ -21,7 +21,6 @@ Source0:        https://hackage.haskell.org/package/%{pkgver}/%{pkgver}.tar.gz
 Packager:       Owen Zimmerman <owen@fyralabs.com>
 
 # Begin cabal-rpm deps:
-BuildRequires:  ghc-rpm-macros
 BuildRequires:  ghc-Cabal-devel
 BuildRequires:  ghc-array-devel
 BuildRequires:  ghc-base-devel

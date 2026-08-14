@@ -18,8 +18,6 @@ License:       ((MIT OR Apache-2.0) AND Unicode-3.0) AND (0BSD OR MIT OR Apache-
 Summary:       Automatic Patching/Updating of GMod CEF. Fixes macOS/Linux launch issues.
 URL:           https://solsticegamestudios.com/fixmedia
 Source0:       https://github.com/solsticegamestudios/%{git_name}/archive/refs/tags/%{version}.tar.gz
-BuildRequires: anda-srpm-macros
-BuildRequires: cargo-rpm-macros
 BuildRequires: git-lfs
 BuildRequires: mold
 Provides:      %{git_name}

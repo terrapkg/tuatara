@@ -10,7 +10,6 @@ License:        MIT
 URL:            https://github.com/eylles/pywal16
 Source0:        %{pypi_source}
 BuildRequires:  ImageMagick
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(colorama)
 BuildRequires:  python3dist(colorthief)

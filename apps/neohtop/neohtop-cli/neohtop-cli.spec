@@ -12,7 +12,6 @@ License:        MIT
 URL:            https://github.com/Abdenasser/neohtop-cli
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 Packager:       Owen Zimmerman <owen@fyralabs.com>
-BuildRequires:  go-rpm-macros
 
 %description
 %summary.

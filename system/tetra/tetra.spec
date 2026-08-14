@@ -7,11 +7,9 @@ License:        LGPL-2.1-or-later AND (0BSD OR MIT OR Apache-2.0) AND (Apache-2.
 URL:            https://github.com/Ultramarine-Linux/tetra
 Source0:        https://github.com/Ultramarine-Linux/tetra/archive/refs/tags/v%{version}.tar.gz
 
-BuildRequires:  anda-srpm-macros
 BuildRequires:  rust-packaging
 BuildRequires:  gcc
 BuildRequires:  pkgconfig(openssl)
-BuildRequires:  systemd-rpm-macros
 
 Requires:       podman
 Requires:       systemd

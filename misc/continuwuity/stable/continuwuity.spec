@@ -7,13 +7,9 @@ License:	(MIT OR Apache-2.0 OR BSD-3-Clause) AND Unlicense AND (Apache-2.0 OR IS
 URL:            https://continuwuity.org
 Source0:        https://forgejo.ellis.link/continuwuation/continuwuity/archive/v%{version}.tar.gz
 
-BuildRequires:  cargo-rpm-macros >= 25
-BuildRequires:  systemd-rpm-macros
 # Needed to build rust-librocksdb-sys
 BuildRequires:  clang
 BuildRequires:  liburing-devel
-BuildRequires:  anda-srpm-macros
-BuildRequires:  rust-srpm-macros
 
 Requires:       liburing
 Requires:       glibc

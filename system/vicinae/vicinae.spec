@@ -27,8 +27,6 @@ BuildRequires:  pkgconfig(protobuf)
 BuildRequires:  pkgconfig(icu-uc)
 BuildRequires:  wayland-devel
 BuildRequires:  nodejs-npm
-BuildRequires:  systemd-rpm-macros
-BuildRequires:  anda-srpm-macros
 BuildRequires:  ninja-build
 BuildRequires:  qt6-qtbase-devel
 BuildRequires:  qt6-qtbase-private-devel

@@ -9,7 +9,6 @@ Source0:        https://github.com/containers/youki/archive/refs/tags/v%{version
 
 BuildRequires:  pkg-config
 BuildRequires:  rust-packaging
-BuildRequires:  anda-srpm-macros
 BuildRequires:  systemd-devel
 BuildRequires:  git-core
 BuildRequires:  dbus-devel

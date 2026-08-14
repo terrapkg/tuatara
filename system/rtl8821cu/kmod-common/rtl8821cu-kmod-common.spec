@@ -12,7 +12,6 @@ Summary:        Common files and documentation for the rtl8821cu driver
 License:        GPL-2.0-only
 URL:            https://github.com/morrownr/8821cu-20210916
 Source0:        %{url}/archive/%{commit}.tar.gz#/%{git_name}-%{shortcommit}.tar.gz
-BuildRequires:  systemd-rpm-macros
 Requires:       rtl8821cu-kmod = %{version}
 BuildArch:      noarch
 Packager:       Gilver E. <roachy@fyralabs.com>

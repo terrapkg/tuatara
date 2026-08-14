@@ -17,7 +17,6 @@ Summary:        Grabs the dominant color or a representative color palette from 
 License:        BSD-3-Clause
 URL:            https://github.com/fengsp/color-thief-py
 Source0:        %{pypi_source}
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(pillow)
 BuildRequires:  python3dist(pip)

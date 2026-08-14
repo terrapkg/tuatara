@@ -5,7 +5,6 @@ Summary:        System monitoring tool with historical data service, triggers an
 License:        MIT
 URL:            https://github.com/inv2004/ttop
 Source0:		%url/archive/refs/tags/v%version.tar.gz
-BuildRequires:  anda-srpm-macros
 BuildRequires:  nim
 
 Packager:       Owen Zimmerman <owen@fyralabs.com>

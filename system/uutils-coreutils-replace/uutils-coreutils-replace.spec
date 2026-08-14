@@ -17,7 +17,6 @@ Source3:        https://raw.githubusercontent.com/coreutils/coreutils/refs/heads
 Patch0:         coreutils-fix-metadata.diff
 Patch1:         coreutils-fix-seq-neg-num-tests.diff
 Patch3:         https://src.fedoraproject.org/rpms/coreutils/raw/rawhide/f/coreutils-8.32-DIR_COLORS.patch
-BuildRequires:  anda-srpm-macros
 BuildRequires:  cargo
 BuildRequires:  clang-devel
 BuildRequires:  gcc-c++

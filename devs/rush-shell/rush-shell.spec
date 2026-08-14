@@ -6,7 +6,6 @@ URL:            https://github.com/isene/rush
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 Source1:        https://unlicense.org/UNLICENSE
 License:        Unlicense AND (Apache-2.0 OR MIT) AND MIT AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT) AND MPL-2.0 AND (Unlicense OR MIT)
-BuildRequires:  cargo-rpm-macros
 
 Packager:       Owen Zimmerman <owen@fyralabs.com>
 

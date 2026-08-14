@@ -19,7 +19,7 @@ Packager:   Cappy Ishihara <cappy@fyralabs.com>
 
 ExclusiveArch:	x86_64
 
-BuildRequires: terra-appstream-helper anda-srpm-macros desktop-file-utils
+BuildRequires: terra-appstream-helper desktop-file-utils
 Requires:	java >= 1.8.0
 Requires:       gtk3
 Requires:       libgpg-error

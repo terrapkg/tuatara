@@ -10,7 +10,6 @@ SourceLicense: Apache-2.0
 License:       MIT AND ISC AND Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause
 URL:           https://github.com/sorenlouv/%{npm_name}
 Source0:       http://registry.npmjs.org/%{npm_name}/-/%{npm_name}-%{version}.tgz
-BuildRequires: anda-srpm-macros >= 0.3.0
 BuildRequires: nodejs-packaging
 BuildRequires: nodejs-npm
 BuildRequires: nodejs-license-checker

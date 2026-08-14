@@ -16,7 +16,6 @@ URL:            https://github.com/intel/ipu6-camera-bins
 Source0:        %{url}/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 BuildRequires:  chrpath
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 #Requires:       gstreamer1-plugin-icamerasrc
 Requires:       intel-ipu6-kmod
 Requires:       intel-vsc-firmware >= 20240513

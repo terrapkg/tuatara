@@ -9,7 +9,7 @@ URL:            https://github.com/kpcyrd/spotify-launcher
 
 Source0:        https://github.com/kpcyrd/spotify-launcher/archive/refs/tags/v%{version}.tar.gz
 
-BuildRequires:  cargo cargo-rpm-macros anda-srpm-macros pkgconfig(liblzma) desktop-file-utils
+BuildRequires:  cargo pkgconfig(liblzma) desktop-file-utils
 Requires:       sequoia-sqv zenity alsa-lib gtk3 desktop-file-utils openssl nss at-spi2-atk libcurl libSM libayatana-appindicator-gtk3
 
 

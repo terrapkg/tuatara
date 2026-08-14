@@ -9,8 +9,6 @@ Packager:	    Owen Zimmerman <owen@fyralabs.com>
 Patch0:         spdtool-python3.patch
 Patch1:         elf_segment_extractor-python3.patch
 
-BuildRequires:  anda-srpm-macros
-BuildRequires:  go-rpm-macros
 BuildRequires:  pkg-config
 
 BuildRequires:  gcc

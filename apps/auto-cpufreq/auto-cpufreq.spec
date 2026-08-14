@@ -14,7 +14,6 @@ BuildRequires:  python3-wheel
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-pip
 BuildRequires:  python3-installer
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  python3-poetry-core
 BuildRequires:  python3-poetry-dynamic-versioning
 BuildArch:      noarch

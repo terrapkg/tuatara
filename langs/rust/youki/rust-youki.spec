@@ -12,7 +12,6 @@ License:        None
 URL:            https://crates.io/crates/youki
 Source:         %{terra_crates_source}
 
-BuildRequires:  anda-srpm-macros cargo-rpm-macros >= 24
 BuildRequires:  pkg-config
 BuildRequires:  systemd-devel
 BuildRequires:  dbus-devel

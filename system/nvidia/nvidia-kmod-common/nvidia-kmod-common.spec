@@ -17,7 +17,6 @@ Source20:       nvidia.conf
 Source21:       60-nvidia.rules
 Source24:       99-nvidia.conf
 # UDev rule location (_udevrulesdir) and systemd macros:
-BuildRequires:  systemd-rpm-macros
 Requires:       dracut
 Requires:       nvidia-modprobe
 Requires:       nvidia-driver = %{?epoch:%{epoch}:}%{version}

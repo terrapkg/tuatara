@@ -8,7 +8,6 @@ License:        ((MIT OR Apache-2.0) AND Unicode-3.0) AND (0BSD OR MIT OR Apache
 Summary:        COSMIC panel applet showing application icons on workspaces
 URL:            https://github.com/crocodile/cosmic-ext-applet-workspace-icons
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  pkgconfig(xkbcommon)
 Requires:       cosmic-osd
 Packager:       Olivia <git@olivia.sh>

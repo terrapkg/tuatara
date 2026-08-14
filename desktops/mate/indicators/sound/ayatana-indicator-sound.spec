@@ -10,7 +10,6 @@ BuildRequires:  cmake
 BuildRequires:  lomiri-api-devel
 BuildRequires:  lomiri-schemas
 BuildRequires:  cmake-extras
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(libayatana-common)
 BuildRequires:  accountsservice-devel

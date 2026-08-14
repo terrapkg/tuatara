@@ -38,8 +38,6 @@ Conflicts:      zed-preview
 # BUG: fedora rustc missing this dep
 BuildRequires:  libedit(x86-64)
 %endif
-BuildRequires:  cargo-rpm-macros >= 24
-BuildRequires:  anda-srpm-macros
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  gettext-envsubst

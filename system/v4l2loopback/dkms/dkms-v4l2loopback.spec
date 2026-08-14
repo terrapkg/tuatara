@@ -11,7 +11,6 @@ License:        GPL-2.0-or-later
 URL:            https://github.com/v4l2loopback/v4l2loopback
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 Source1:        no-weak-modules.conf
-BuildRequires:  systemd-rpm-macros
 Requires:       %{modulename} = %{?epoch:%{epoch}:}%{version}
 Requires:       dkms
 Requires:       help2man

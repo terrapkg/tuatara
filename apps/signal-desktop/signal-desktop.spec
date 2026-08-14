@@ -14,7 +14,6 @@ License:		AGPL-3.0-only AND %{electron_license}
 BuildRequires:	pulseaudio-libs-devel
 BuildRequires:  libX11-devel
 BuildRequires:	git-lfs
-BuildRequires:  anda-srpm-macros
 BuildRequires:	pnpm
 BuildRequires:  python3
 BuildRequires:  terra-appstream-helper

@@ -7,7 +7,6 @@ Summary:        Color scheme generator
 License:        MIT
 URL:            https://github.com/metakirby5/colorz
 Source0:        %{pypi_source}
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)

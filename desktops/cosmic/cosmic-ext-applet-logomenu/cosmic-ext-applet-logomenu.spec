@@ -8,7 +8,6 @@ License:        GPL-3.0-or-later AND (BSD-3-Clause OR MIT OR Apache-2.0) AND Apa
 Summary:        Logo Menu applet for COSMIC
 URL:            https://github.com/cosmic-utils/cosmic-ext-applet-logomenu
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  libxcb-devel
 BuildRequires:  just

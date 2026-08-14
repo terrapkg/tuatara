@@ -16,7 +16,6 @@ BuildRequires:  doxygen
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  pybind11-devel
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 # This package is not buildable on EL due to this dep. There's unfortunately not much I can do about this.
 BuildRequires:  python3-sphinxcontrib-rsvgconverter

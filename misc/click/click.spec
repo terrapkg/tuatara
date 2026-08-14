@@ -23,7 +23,6 @@ BuildRequires: dbus-test-runner
 BuildRequires: vala
 BuildRequires: python3-devel
 BuildRequires: python3-sphinx
-BuildRequires: systemd-rpm-macros
 BuildRequires: systemd
 
 %description

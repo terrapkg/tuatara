@@ -14,7 +14,6 @@ URL:            https://jupyter-sphinx.readthedocs.io/
 VCS:            git:%{giturl}.git
 Source0:        %{giturl}/archive/v%{version}/jupyter-sphinx-%{version}.tar.gz
 BuildRequires:  make
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(bash-kernel)
 BuildRequires:  python3dist(hatchling)

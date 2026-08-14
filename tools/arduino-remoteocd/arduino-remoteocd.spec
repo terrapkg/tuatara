@@ -15,8 +15,6 @@ License:        GPL-3.0-only
 
 URL:            https://github.com/arduino/remoteocd
 Source:         %{gosource}
-BuildRequires:  anda-srpm-macros
-BuildRequires:  go-rpm-macros
 BuildRequires:  go-task
 
 Provides:       arduino-remoteocd

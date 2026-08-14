@@ -5,9 +5,6 @@ Summary:        Userspace utility for controling VRAM utilization
 License:        MIT AND (Apache-2.0 OR MIT)
 URL:            https://gitlab.steamos.cloud/holo/dmemcg-booster
 Source0:        %url/-/archive/%version/dmemcg-booster-%version.tar.gz
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  dbus-devel
 Packager:       Tulip Blossom <tulilirockz@outlook.com>
 

@@ -15,7 +15,6 @@ BuildArch:      noarch
 Source0:        %{url}/archive/%{commit}/%{ver}-%{commit}.tar.gz
 
 BuildRequires:  golang
-BuildRequires:  go-rpm-macros go-srpm-macros anda-srpm-macros
 
 %description
 %summary.

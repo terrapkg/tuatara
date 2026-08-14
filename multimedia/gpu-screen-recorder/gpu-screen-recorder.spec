@@ -31,7 +31,6 @@ BuildRequires:  pkgconfig(libspa-0.2)
 BuildRequires:  pkgconfig(libglvnd)
 BuildRequires:  pkgconfig(vulkan)
 Requires(post): libcap
-BuildRequires:  systemd-rpm-macros
 
 Packager:       Cypress Reed <cypress@fyralabs.com>
 

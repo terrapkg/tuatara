@@ -5,7 +5,7 @@ Summary:        An alternative to genfstab: generate output suitable for additio
 License:        MIT
 URL:            https://github.com/Ultramarine-Linux/mkfstab
 Source0:		%url/archive/refs/tags/v%version.tar.gz
-BuildRequires:  nim anda-srpm-macros
+BuildRequires:  nim
 
 %description
 An alternative to genfstab from Arch Linux. This is a dead simple but faster implementation of genfstab.

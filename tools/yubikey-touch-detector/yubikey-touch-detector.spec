@@ -13,10 +13,8 @@ Source0:        %{url}/archive/refs/tags/%{version}.tar.gz
 
 Packager:       Olivia <git@olivia.sh>
 
-BuildRequires:  go-rpm-macros
 BuildRequires:  scdoc
 BuildRequires:  pkgconfig(gpgme)
-BuildRequires:  systemd-rpm-macros
 
 %description
 This is a tool that can detect when YubiKey is waiting for your touch. It is

@@ -14,10 +14,8 @@ License:        ((MIT OR Apache-2.0) AND Unicode-3.0) AND (Apache-2.0 OR MIT) AN
 SourceLicense:  GPL-2.0-only
 URL:            https://github.com/sched-ext/scx-loader
 Source0:        %{url}/archive/%{commit}/%{commit}.tar.gz
-BuildRequires:  anda-srpm-macros
 BuildRequires:  bpftool
 BuildRequires:  cargo
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  clang >= 17
 BuildRequires:  gcc
 BuildRequires:  git
@@ -28,7 +26,6 @@ BuildRequires:  mold
 BuildRequires:  python3
 BuildRequires:  rust
 BuildRequires:  systemd
-BuildRequires:  systemd-rpm-macros
 Requires:       (scx-scheds or scx-scheds-nightly)
 Suggests:       scx-scheds-nightly
 Obsoletes:      scxctl <= 0.3.4

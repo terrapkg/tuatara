@@ -9,7 +9,6 @@ Release:        1%?dist
 License:        GPL-2.0-only
 Source0:        https://gitlab.com/vicamo/v4l2-relayd//-/archive/%{commit}/%{name}-%{shortcommit}.tar.gz
 Source1:        v4l2-relayd.preset
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  gcc
 BuildRequires:  g++
 BuildRequires:  autoconf

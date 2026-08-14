@@ -18,7 +18,6 @@ BuildRequires: ninja-build
 BuildRequires: gettext
 BuildRequires: cmake
 BuildRequires: vala
-BuildRequires: systemd-rpm-macros
 BuildRequires: pkgconfig(libxfce4panel-2.0)
 BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: java-devel

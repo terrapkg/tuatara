@@ -13,8 +13,6 @@ URL:            https://crates.io/crates/dysk
 Source:         %{terra_crates_source}
 Packager:       madonuko <mado@fyralabs.com>
 
-BuildRequires:  cargo-rpm-macros >= 24
-
 %global _description %{expand:
 Give information on mounted filesystems.}
 

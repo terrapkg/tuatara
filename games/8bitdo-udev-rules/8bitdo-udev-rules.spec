@@ -11,7 +11,6 @@ Source0:        71-8bitdo.rules
 Source1:        com.8bitdo.Udev.metainfo.xml
 BuildArch:      noarch
 BuildRequires:  systemd
-BuildRequires:  anda-srpm-macros
 Requires:       systemd-udev
 
 %global udev_order 71

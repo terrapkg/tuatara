@@ -67,6 +67,7 @@ jobs:
         if: ${{ matrix.pkg.labels.mock != '1' }}
         run: |
           zypper install --allow-unsigned-rpm -y $(rpmspec -q tuatara/*/*.spec --buildrequires)
+          zypper install --allow-unsigned-rpm -y $(rpmspec -q tuatara/*/*.spec --buildrequires) # run again to expand macros
 
       - name: Build with Andaman
         run: anda build -D "vendor Terra" -D "__python %{__python3}" ${{ matrix.pkg.pkg }} -c terra-${{ matrix.version }}-${{ matrix.pkg.arch }} ${{ !matrix.pkg.labels.mock == '1' && '-rrpmbuild' || '' }}

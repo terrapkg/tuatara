@@ -27,7 +27,6 @@ BuildRequires: pkgconfig(xv)
 BuildRequires: pkgconfig(QtDBus)
 BuildRequires: qt5-doctools
 BuildRequires: qt5-qtdeclarative-devel
-BuildRequires: qt5-rpm-macros
 BuildRequires: qt5-qtbase-private-devel
 BuildRequires: qt5-qtbase
 

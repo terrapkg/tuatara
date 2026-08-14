@@ -12,8 +12,6 @@ Source0:          %{url}/archive/%{commit}.tar.gz
 Source1:          steamos_manager.te
 Source2:          steamos_manager.if
 Source3:          steamos_manager.fc
-BuildRequires:    anda-srpm-macros
-BuildRequires:    cargo-rpm-macros
 BuildRequires:    clang-devel
 BuildRequires:    rust
 BuildRequires:    mold

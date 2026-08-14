@@ -18,7 +18,6 @@ BuildRequires:  clang
 BuildRequires:  gcc
 %endif
 BuildRequires:  cargo-packaging
-BuildRequires:  anda-srpm-macros
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  git-core
 BuildRequires:  pkgconfig(libgit2)

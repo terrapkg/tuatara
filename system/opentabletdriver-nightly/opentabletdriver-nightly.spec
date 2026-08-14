@@ -21,7 +21,7 @@ Source:         %url/archive/%commit.tar.gz
 Packager:       madonuko <mado@fyralabs.com>
 
 BuildRequires: dotnet-sdk-%{dotnet_runtime_version}
-BuildRequires: git-core jq systemd-rpm-macros
+BuildRequires: git-core jq
 
 Requires: dotnet-runtime-%{dotnet_runtime_version}
 Requires: libevdev.so.2()(64bit)

@@ -12,7 +12,7 @@ Source0:		https://github.com/OpenAsar/arrpc/archive/%commit.tar.gz
 Source1:		arrpc.service
 Patch0:			0001-fix-support-esbuild.patch
 Requires:		glibc
-BuildRequires:	nodejs-npm systemd-rpm-macros
+BuildRequires:	nodejs-npm
 
 %description
 arRPC is an open source implementation of Discord's half-documented local RPC servers for their desktop client.

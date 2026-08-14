@@ -13,7 +13,6 @@ URL:            https://flashprog.org
 
 Packager:       sadlerm <lerm@chromebooks.lol>
 
-BuildRequires:  anda-srpm-macros
 BuildRequires:  make
 BuildRequires:  gcc
 BuildRequires:  doxygen

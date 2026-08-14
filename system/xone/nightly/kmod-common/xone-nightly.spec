@@ -28,7 +28,6 @@ Source5:        https://catalog.s.download.windowsupdate.com/d/msdownload/update
 Source6:        https://www.microsoft.com/en-us/legal/terms-of-use
 BuildRequires:  cabextract
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 Requires:       wireless-regdb
 Requires:       %{name}-firmware = %{?epoch:%{epoch}:}%{version}-%{release}
 Requires:       %{name}-kmod = %{?epoch:%{epoch}:}%{version}

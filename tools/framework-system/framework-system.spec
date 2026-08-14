@@ -5,8 +5,6 @@ Summary:        Rust libraries and tools to interact with the Framework Computer
 URL:            https://github.com/FrameworkComputer/framework-system
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 License:        BSD-3-Clause AND (Apache-2.0 OR BSL-1.0) AND (Apache-2.0 OR MIT) AND BSD-2-Clause AND MIT AND MPL-2.0 AND (Unlicense OR MIT)
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  mold
 BuildRequires:  rust-udev-devel
 BuildRequires:  rust

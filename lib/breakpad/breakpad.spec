@@ -12,7 +12,6 @@ BuildRequires:      gcc-c++
 BuildRequires:      pkgconfig(gmock)
 BuildRequires:      pkgconfig(gtest)
 BuildRequires:      pkgconfig(zlib)
-BuildRequires:      anda-srpm-macros
 
 Packager:           Cypress Reed <cypress@fyralabs.com>
 

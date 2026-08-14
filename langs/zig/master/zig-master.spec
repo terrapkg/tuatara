@@ -55,7 +55,6 @@ BuildRequires:  elfutils-libelf-devel
 BuildRequires:  libstdc++-static
 %endif
 # For the version_no_tilde macro
-BuildRequires:  rust-srpm-macros
 Requires:       %{name}-libs = %{version}
 # Apache-2.0 WITH LLVM-exception OR NCSA OR MIT
 Provides:       bundled(compiler-rt) = %{llvm_version}

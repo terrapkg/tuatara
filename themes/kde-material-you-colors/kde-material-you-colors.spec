@@ -11,15 +11,12 @@ License:        GPL-3.0-only
 URL:            https://github.com/luisbocanegra/%{name}
 # The PyPi source is a more generic install and lacks the Plasmoid config
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
-BuildRequires:  anda-srpm-macros
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.16
 BuildRequires:  extra-cmake-modules >= 6.0.0
 BuildRequires:  generic-logos
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
-BuildRequires:  python-rpm-macros
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools) >= 61.0
 BuildRequires:  python3dist(wheel) >= 0.37.1

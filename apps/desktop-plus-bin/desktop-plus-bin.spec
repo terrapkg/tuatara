@@ -24,7 +24,6 @@ Packager:       Caio Bruno <cbrunofb@gmail.com>
 
 ExclusiveArch:  x86_64 aarch64
 
-BuildRequires:  anda-srpm-macros
 BuildRequires:  cpio
 BuildRequires:  terra-appstream-helper
 Recommends:     (gnome-keyring or kf6-kwallet)

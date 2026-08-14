@@ -10,8 +10,6 @@ License:        GPL-2.0-or-later
 URL:            https://github.com/Fred78290/%{name}
 Source0:        %{url}/archive/%{commit}.tar.gz#/%{name}-%{shortcommit}.tar.gz
 Source1:        com.github.nct6687d.metainfo.xml
-BuildRequires:  systemd-rpm-macros
-BuildRequires:  anda-srpm-macros
 Requires:       %{name}-kmod = %{?epoch:%{epoch}:}%{version}
 Provides:       %{name}-kmod-common = %{?epoch:%{epoch}:}%{version}
 Obsoletes:      %{name}-akmods-modules < %{evr}

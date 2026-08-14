@@ -12,7 +12,6 @@ URL:            https://atar-axis.github.io/%{name}
 Source0:        https://github.com/atar-axis/xpadneo/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:  make
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 Requires:       %{name}-kmod = %{?epoch:%{epoch}:}%{version}
 Provides:       %{name}-kmod-common = %{?epoch:%{epoch}:}%{version}
 Obsoletes:      %{name}-kmod-common < %{?epoch:%{epoch}:}0.9.7^20241224git.8d20a23-5%{?dist}

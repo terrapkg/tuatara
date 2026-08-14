@@ -16,7 +16,6 @@ URL:           https://github.com/morrownr/8821cu-20210916
 Source0:       %{url}/archive/%{commit}.tar.gz#/%{git_name}-%{shortcommit}.tar.gz
 Source1:       no-weak-modules.conf
 BuildRequires: sed
-BuildRequires: systemd-rpm-macros
 Requires:      %{modulename}-kmod-common = %{version}
 Requires:      dkms
 # Required for DKMS to build the kmod

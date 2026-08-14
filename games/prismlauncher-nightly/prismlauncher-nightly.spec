@@ -38,7 +38,6 @@ BuildRequires:    terra-appstream-helper
 # https://fedoraproject.org/wiki/Changes/ThirdPartyLegacyJdks
 # https://adoptium.net/installation/linux/#_centosrhelfedora_instructions
 BuildRequires:    temurin-17-jdk
-BuildRequires:    anda-srpm-macros
 BuildRequires:    desktop-file-utils
 BuildRequires:    libappstream-glib
 BuildRequires:    tomlplusplus-devel

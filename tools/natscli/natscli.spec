@@ -19,7 +19,6 @@ Packager:       Ruka <pkgs@ruka.red>
 
 BuildRequires:  go
 BuildRequires:  git
-BuildRequires:  anda-srpm-macros
 
 %description
 A command line utility to interact with and manage NATS.

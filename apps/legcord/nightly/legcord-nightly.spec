@@ -17,7 +17,7 @@ Packager:       Owen <owen@fyralabs.com>
 Requires:       xdg-utils
 Obsoletes:      armcord < 3.3.2-1
 Conflicts:      legcord
-BuildRequires:  anda-srpm-macros pnpm nodejs-npm git-core gcc gcc-c++ make desktop-file-utils zlib-ng-compat-devel nvm
+BuildRequires:  pnpm nodejs-npm git-core gcc gcc-c++ make desktop-file-utils zlib-ng-compat-devel nvm
 
 %description
 Legcord is a custom client designed to enhance your Discord experience

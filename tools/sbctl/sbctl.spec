@@ -24,8 +24,6 @@ Recommends:     systemd-udev
 
 BuildRequires:  asciidoc
 BuildRequires:  git
-BuildRequires:  go-rpm-macros
-BuildRequires:  anda-srpm-macros
 BuildRequires:  pkgconfig(libpcsclite)
 
 %description

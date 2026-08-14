@@ -10,8 +10,6 @@ License:        GPL-3.0-only
 
 URL:            https://github.com/arduino/arduino-app-cli
 Source:         %{gosource}
-BuildRequires:  anda-srpm-macros
-BuildRequires:  go-rpm-macros
 BuildRequires:  go-task
 
 Packager:       Owen Zimmerman <owen@fyralabs.com>

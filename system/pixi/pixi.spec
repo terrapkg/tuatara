@@ -8,8 +8,6 @@ URL:            https://pixi.sh
 Source:         https://github.com/prefix-dev/pixi/archive/refs/tags/v%{version}.tar.gz
 Packager:       Olivia <git@olivia.sh>
 
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros >= 24
 BuildRequires:  mold
 
 %pkg_completion -BefNz

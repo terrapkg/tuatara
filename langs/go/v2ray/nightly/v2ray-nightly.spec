@@ -22,7 +22,7 @@ Conflicts:      v2ray
 
 Requires:       v2ray-geoip v2ray-domain-list-community
 
-BuildRequires:  go go-rpm-macros go-srpm-macros anda-srpm-macros
+BuildRequires:  go
 
 %description
 %summary.

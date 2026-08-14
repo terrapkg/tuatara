@@ -34,7 +34,6 @@ BuildRequires: pkgconfig(dbus-1)
 # Not in pkgconfig but required
 BuildRequires: properties-cpp-devel
 BuildRequires: libcurl-devel
-BuildRequires: systemd-rpm-macros
 
 %description
 User space daemon for launching applications

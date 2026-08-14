@@ -13,7 +13,6 @@ License:        MIT
 URL:            https://crates.io/crates/koji
 Source:         %{terra_crates_source}
 
-BuildRequires:  cargo-rpm-macros >= 24 anda-srpm-macros
 BuildRequires:  openssl-devel
 
 %global _description %{expand:

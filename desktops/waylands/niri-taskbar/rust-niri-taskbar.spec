@@ -15,7 +15,6 @@ Source:         https://static.crates.io/crates/%{crate}/%{crate}-%{crate_versio
 # Automatically generated patch to strip dependencies and normalize metadata
 Patch:          niri-taskbar-fix-metadata-auto.diff
 
-BuildRequires:  cargo-rpm-macros >= 24
 BuildRequires:  pkgconfig(cairo-gobject)
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(gdk-pixbuf-2.0)

@@ -21,7 +21,6 @@ BuildRequires: pkgconfig(dbus-1)
 BuildRequires: libXi-devel
 BuildRequires: lttng-ust-devel
 BuildRequires: qt5-doctools
-BuildRequires: qt5-rpm-macros
 BuildRequires: qt5-qtdeclarative
 BuildRequires: qt5-qtbase-static
 BuildRequires: qt5-qtbase-private-devel
@@ -31,7 +30,6 @@ BuildRequires: qt5-qtsystems-devel
 BuildRequires: qt5-qtdeclarative-devel
 BuildRequires: qt5-pim-devel
 BuildRequires: python3-devel
-BuildRequires: python3-rpm-macros
 BuildRequires: qt5-qtsvg-devel
 BuildRequires: fdupes
 BuildRequires: python3dist(pip)

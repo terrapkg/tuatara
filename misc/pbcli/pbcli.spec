@@ -9,8 +9,6 @@ SourceLicense:  Unlicense OR MIT
 License:        ((Apache-2.0 OR MIT) AND BSD-3-Clause) AND (0BSD OR MIT OR Apache-2.0) AND (Apache-2.0 AND ISC) AND (Apache-2.0 OR BSL-1.0) AND (Apache-2.0 OR ISC OR MIT) AND (Apache-2.0 OR MIT) AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT) AND Apache-2.0 AND (BSD-2-Clause OR Apache-2.0 OR MIT) AND BSD-3-Clause AND ISC AND (MIT OR Apache-2.0 OR Zlib) AND (MIT OR Apache-2.0) AND (MIT OR Zlib OR Apache-2.0) AND MIT AND MPL-2.0 AND (Unlicense OR MIT) AND (Zlib OR Apache-2.0 OR MIT)
 URL:            https://github.com/Mydayyy/%{name}
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros >= 24
 BuildRequires:  mold
 BuildRequires:  openssl-libs
 BuildRequires:  perl-ExtUtils-MM-Utils

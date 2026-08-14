@@ -10,7 +10,6 @@ Packager:       Owen Zimmerman <owen@fyralabs.com>
 
 BuildRequires:  cargo
 BuildRequires:  rust
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  libpcap-devel
 BuildRequires:  elfutils-libelf-devel
 BuildRequires:  clang

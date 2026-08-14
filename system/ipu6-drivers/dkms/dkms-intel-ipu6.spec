@@ -16,7 +16,6 @@ Source0:        %{url}/archive/%{commit}.tar.gz#/ipu6-drivers-%{shortcommit}.tar
 Source1:        %{name}.conf
 BuildRequires:  elfutils-libelf-devel
 BuildRequires:  gcc
-BuildRequires:  systemd-rpm-macros
 Provides:       %{modulename}-kmod
 Requires:       %{modulename}-kmod-common = %{?epoch:%{epoch}:}%{version}
 Requires:       dkms

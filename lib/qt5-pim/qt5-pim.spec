@@ -16,7 +16,6 @@ BuildRequires: qt5-qtdeclarative-devel
 BuildRequires: pkgconfig(QtCore)
 BuildRequires: perl
 BuildRequires: qt5-doctools
-BuildRequires: qt5-rpm-macros
 
 Provides: %{name}-bearer = %{version}-%{release}
 Provides: %{name}-connectivity = %{version}-%{release}

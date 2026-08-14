@@ -11,8 +11,6 @@ Source0:        https://github.com/Baldomo/open-in-mpv/archive/refs/tags/v%{vers
 
 ExclusiveArch:  %{golang_arches}
 
-BuildRequires:  go-rpm-macros
-BuildRequires:  anda-srpm-macros
 BuildRequires:  git
 BuildRequires:  elfutils
 

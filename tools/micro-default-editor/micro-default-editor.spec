@@ -13,7 +13,6 @@ Source0:       https://raw.githubusercontent.com/terrapkg/pkg-micro-default-edit
 Source1:       https://raw.githubusercontent.com/terrapkg/pkg-micro-default-editor/%{commit}/micro-default-editor.sh
 Source2:       https://raw.githubusercontent.com/terrapkg/pkg-micro-default-editor/%{commit}/micro-default-editor.fish
 # For EVR macro
-BuildRequires: anda-srpm-macros
 Requires:      default-editor
 Requires:      micro
 # All default editor packages MUST provide this

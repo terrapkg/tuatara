@@ -8,7 +8,6 @@ License:        (BSD-3-Clause OR MIT OR Apache-2.0) AND (Apache-2.0 OR MIT) AND 
 Summary:        A menu applet for COSMIC Desktop
 URL:            https://github.com/cosmic-utils/examine
 Source0:        %{url}/archive/refs/tags/%{version}.tar.gz
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  just
 Requires:       cosmic-osd

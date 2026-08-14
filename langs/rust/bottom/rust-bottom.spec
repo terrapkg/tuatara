@@ -12,8 +12,6 @@ License:        MIT
 URL:            https://crates.io/crates/bottom
 Source:         %{terra_crates_source}
 
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros >= 24
 
 %global _description %{expand:
 A customizable cross-platform graphical process/system monitor for the

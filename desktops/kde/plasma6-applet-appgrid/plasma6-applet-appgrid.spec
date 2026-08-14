@@ -13,7 +13,6 @@ BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
 BuildRequires:  gcc-c++
 BuildRequires:  gettext
-BuildRequires:  kf6-rpm-macros
 BuildRequires:  cmake(Qt6Quick)
 BuildRequires:  cmake(Qt6Gui)
 BuildRequires:  cmake(Qt6DBus)

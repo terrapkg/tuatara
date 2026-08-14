@@ -15,7 +15,6 @@ Source1: modules-load.conf
 
 BuildRequires: gcc
 BuildRequires: make
-BuildRequires: systemd-rpm-macros
 BuildRequires: sed
 BuildRequires: gtk3-devel
 

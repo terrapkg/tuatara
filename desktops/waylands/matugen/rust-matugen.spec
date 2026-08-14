@@ -13,8 +13,6 @@ Source1:        https://raw.githubusercontent.com/InioX/matugen/refs/tags/v%vers
 Source2:        https://raw.githubusercontent.com/InioX/matugen/refs/tags/v%version/CHANGELOG.md
 Source3:        https://raw.githubusercontent.com/InioX/matugen/refs/tags/v%version/LICENSE
 
-BuildRequires:  cargo-rpm-macros >= 24
-BuildRequires:  anda-srpm-macros
 BuildRequires:  mold
 
 Packager:       sadlerm <sad_lerm@hotmail.com>

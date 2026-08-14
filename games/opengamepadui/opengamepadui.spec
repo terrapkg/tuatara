@@ -34,7 +34,6 @@ BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xau)
 BuildRequires:  pkgconfig(xtst)
 BuildRequires:  pkgconfig(xdmcp)
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  patch
 
 Requires:       godot-runner

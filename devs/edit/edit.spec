@@ -15,8 +15,6 @@ License:       MIT AND (MIT OR Apache-2.0)
 URL:           https://github.com/microsoft/edit
 Source0:       %{url}/archive/refs/tags/v%{version}.tar.gz
 Source1:       %{appid}.metainfo.xml
-BuildRequires: anda-srpm-macros
-BuildRequires: cargo-rpm-macros
 %if %{with rust_nightly}
 BuildRequires: rustup
 %endif

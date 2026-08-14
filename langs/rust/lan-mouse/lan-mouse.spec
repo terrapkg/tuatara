@@ -13,8 +13,6 @@ Source0:        %{url}/archive/refs/tags/v%version.tar.gz
 Packager:       ayykamp <kamp@ayyy.dev>
 
 Requires:       gtk4
-BuildRequires:  cargo-rpm-macros >= 24
-BuildRequires:  anda-srpm-macros
 BuildRequires:  cargo mold
 BuildRequires:  pkgconfig(glib-2.0) >= 2.66
 BuildRequires:  pkgconfig(gtk4) >= 4.2

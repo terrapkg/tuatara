@@ -15,7 +15,6 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  libappstream-glib
 BuildRequires:  cmake
 BuildRequires:  extra-cmake-modules
-BuildRequires:  kf6-rpm-macros
 
 BuildRequires:  cmake(SDL3)
 BuildRequires:  cmake(Qt6Core)

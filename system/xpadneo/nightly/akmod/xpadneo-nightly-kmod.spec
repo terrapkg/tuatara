@@ -14,7 +14,6 @@ License:        GPL-2.0-only AND GPL-3.0-or-later
 URL:            https://atar-axis.github.io/xpadneo
 Source0:        https://github.com/atar-axis/xpadneo/archive/%{commit}.tar.gz#/xpadneo-%{shortcommit}.tar.gz
 BuildRequires:  kmodtool
-BuildRequires:  systemd-rpm-macros
 Requires:       akmods
 Requires:       bluez
 Requires:       bluez-tools

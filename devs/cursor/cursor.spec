@@ -22,7 +22,6 @@ URL:            https://cursor.com
 Source0:        https://downloads.cursor.com/production/%{commit}/linux/%{platform}/deb/%{debarch}/deb/cursor_%{version}_%{debarch}.deb
 ExclusiveArch:  x86_64 aarch64
 
-BuildRequires:  anda-srpm-macros
 BuildRequires:  binutils
 BuildRequires:  tar
 Requires:       ca-certificates

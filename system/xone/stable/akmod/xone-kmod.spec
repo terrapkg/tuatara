@@ -13,7 +13,6 @@ License:        GPL-2.0-or-later
 URL:            https://github.com/dlundqvist/xone
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:  kmodtool
-BuildRequires:  systemd-rpm-macros
 Requires:       %{modulename} = %{?epoch:%{epoch}:}%{version}
 Requires:       %{modulename}-akmod-modules = %{?epoch:%{epoch}:}%{version}
 Requires:       akmods

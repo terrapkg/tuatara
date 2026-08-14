@@ -24,7 +24,6 @@ BuildRequires:  gstreamer1-devel
 BuildRequires:  patchelf
 BuildRequires:  libstdc++-static
 BuildRequires:  libxdo-devel
-BuildRequires:  anda-srpm-macros
 BuildRequires:  rustc
 BuildRequires:  %{tauri_buildrequires -a}
 # This may seem weird, but https://github.com/nodejs/node/issues/51752#issuecomment-2970163641

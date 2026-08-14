@@ -22,8 +22,6 @@ Source3:        land.deno.deno.metainfo.xml
 # Automatically generated patch to strip dependencies and normalize metadata
 %dnl Patch:          deno-fix-metadata-auto.diff
 
-BuildRequires:  cargo-rpm-macros >= 24
-BuildRequires:  anda-srpm-macros
 BuildRequires:  protobuf-compiler
 BuildRequires:  llvm19-devel
 BuildRequires:  python3

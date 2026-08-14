@@ -6,8 +6,6 @@ License:       Apache-2.0 OR MIT
 URL:           https://github.com/orhun/binsider
 Source0:       %url/archive/refs/tags/v%{version}.tar.gz
 
-BuildRequires: anda-srpm-macros
-BuildRequires: cargo-rpm-macros
 BuildRequires: gcc
 BuildRequires: cargo
 BuildRequires: mold

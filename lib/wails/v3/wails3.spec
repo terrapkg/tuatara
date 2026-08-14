@@ -17,7 +17,6 @@ Packager:       Owen Zimmerman <owen@fyralabs.com>
 
 BuildRequires:  golang
 BuildRequires:  gcc
-BuildRequires:  go-rpm-macros
 BuildRequires:  webkit2gtk4.1-devel
 BuildRequires:  gtk3-devel
 Requires:       glibc

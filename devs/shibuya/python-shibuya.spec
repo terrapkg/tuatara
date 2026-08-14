@@ -16,7 +16,6 @@ Source0:        https://github.com/lepture/shibuya/archive/refs/tags/%{version}.
 Source0:        %{pypi_source}
 %endif
 BuildRequires:  python3-devel
-BuildRequires:  python3-rpm-macros
 BuildRequires:  python3dist(babel)
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)

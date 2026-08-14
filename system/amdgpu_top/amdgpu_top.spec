@@ -12,7 +12,7 @@ Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  libdrm-devel
-BuildRequires:  cargo cargo-rpm-macros anda-srpm-macros
+BuildRequires:  cargo
 
 %description
 %summary.

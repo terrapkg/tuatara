@@ -23,9 +23,7 @@ License:        MIT
 URL:            https://zrepl.github.io/
 Source:         %{gosource}
 
-BuildRequires:    anda-srpm-macros
 BuildRequires:    git-core
-BuildRequires:    systemd-rpm-macros
 Requires(post):   systemd
 Requires(preun):  systemd
 Requires(postun): systemd

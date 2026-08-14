@@ -9,7 +9,6 @@ Summary:        Linux kernel driver that exposes access to the SMU (System Manag
 License:        GPL-2.0-only
 URL:            https://github.com/amkillam/ryzen_smu
 Source:         %{url}/archive/%{commit}.tar.gz
-BuildRequires:  systemd-rpm-macros
 Requires:       %{name}-kmod = %{?epoch:%{epoch}:}%{version}
 Provides:       %{name}-kmod-common = %{?epoch:%{epoch}:}%{version}
 BuildArch:      noarch

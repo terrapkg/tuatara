@@ -13,7 +13,6 @@ URL:            https://github.com/dlundqvist/xone
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 Source1:        no-weak-modules.conf
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 Requires:       %{modulename} = %{?epoch:%{epoch}:}%{version}
 Requires:       dkms
 Conflicts:      akmod-%{modulename}

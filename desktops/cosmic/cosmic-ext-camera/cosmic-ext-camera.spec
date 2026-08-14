@@ -8,7 +8,6 @@ License:        (BSD-3-Clause OR MIT OR Apache-2.0) AND ((MIT OR Apache-2.0) AND
 Summary:        Camera application for the COSMIC™ desktop environment
 URL:            https://github.com/cosmic-utils/cosmic-ext-camera
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  pkgconfig(libcamera)
 BuildRequires:  pkgconfig(glib-2.0)

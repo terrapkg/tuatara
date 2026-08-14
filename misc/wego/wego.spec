@@ -15,7 +15,6 @@ Packager:       Owen Zimmerman <owen@fyralabs.com>
 
 BuildRequires:  golang
 BuildRequires:  gcc
-BuildRequires:  go-rpm-macros
 Requires:       glibc
 
 %description

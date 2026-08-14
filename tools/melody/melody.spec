@@ -14,7 +14,6 @@ Source0:        https://github.com/tau-OS/melody/archive/refs/heads/main.zip
 BuildArch:      noarch
 
 BuildRequires:  python3-devel
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3dist(anytree)
 BuildRequires:  python3dist(click)
 BuildRequires:  python3dist(pip)

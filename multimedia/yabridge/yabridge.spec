@@ -57,8 +57,6 @@ Source4:        https://github.com/robbert-vdh/vst3sdk/archive/refs/tags/v%{vst3
 #
 
 BuildRequires:  vim
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  uuid-devel
 BuildRequires:  cmake
 BuildRequires:  cargo

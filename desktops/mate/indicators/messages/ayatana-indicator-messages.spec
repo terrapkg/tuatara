@@ -9,7 +9,6 @@ Source0:    %{url}/archive/refs/tags/%{version}.tar.gz
 BuildRequires:  cmake
 BuildRequires:  pkgconfig(lomiri-url-dispatcher)
 BuildRequires:  cmake-extras
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  accountsservice-devel
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gio-unix-2.0)

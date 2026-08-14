@@ -7,7 +7,7 @@ URL:			https://github.com/nim-lang/choosenim
 Source0:        %url/archive/refs/tags/v%version.tar.gz
 Packager:		madonuko <mado@fyralabs.com>
 BuildRequires:  nim
-BuildRequires:	git-core anda-srpm-macros
+BuildRequires:	git-core
 
 %description
 choosenim installs the Nim programming language from official downloads and

@@ -8,7 +8,6 @@ License:        AGPL-3.0-or-later AND (MIT OR Apache-2.0) AND Unicode-3.0 AND (0
 URL:            https://github.com/boxdot/gurk-rs
 Source:         %url/archive/refs/tags/v%version.tar.gz
 
-BuildRequires:  cargo-rpm-macros >= 24
 BuildRequires:  glibc-devel mold perl openssl-devel protobuf-devel
 Requires:       glibc libgcc sqlcipher
 Provides:       gurk-rs

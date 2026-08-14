@@ -19,7 +19,6 @@ Source1:        https://hackage.haskell.org/package/%{pkgver}/%{pkg_name}.cabal#
 
 # Begin cabal-rpm deps:
 BuildRequires:  dos2unix
-BuildRequires:  ghc-rpm-macros
 BuildRequires:  ghc-Cabal-devel
 BuildRequires:  ghc-base-devel
 BuildRequires:  ghc-deepseq-devel

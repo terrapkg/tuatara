@@ -8,7 +8,6 @@ License:        GPL-3.0-only
 Summary:        COSMIC applet for Tailscale
 URL:            https://github.com/cosmic-utils/gui-scale-applet
 Source0:        %{url}/archive/refs/tags/%{version}.tar.gz
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  pkgconfig(xkbcommon)
 Requires:       cosmic-osd
 Packager:       Owen Zimmerman <owen@fyralabs.com>

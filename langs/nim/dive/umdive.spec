@@ -7,7 +7,7 @@ URL:            https://github.com/Ultramarine-Linux/dive
 Source0:		%url/archive/refs/tags/v%version.tar.gz
 Requires:       (%_bindir/chroot or %_sbindir/chroot)
 Requires:       %_bindir/mount
-BuildRequires:  anda-srpm-macros nim mock
+BuildRequires:  nim mock
 Provides:       dive = %version-%release
 
 %description

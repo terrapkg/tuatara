@@ -9,7 +9,6 @@ Patch0:     0001-fix-tests-import-cstdint.patch
 
 BuildRequires:  cmake
 BuildRequires:  cmake-extras
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(libayatana-common)
 BuildRequires:  pkgconfig(gio-unix-2.0)

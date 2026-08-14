@@ -47,10 +47,6 @@ URL:     https://codeberg.org/HastD/%{name}
 Source0: %{url}/archive/v%{version}.tar.gz
 
 # Macros.
-BuildRequires: systemd-rpm-macros
-BuildRequires: cargo-rpm-macros
-BuildRequires: anda-srpm-macros
-BuildRequires: rust-srpm-macros
 
 # Build tooling.
 BuildRequires: meson

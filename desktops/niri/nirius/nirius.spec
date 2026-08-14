@@ -10,7 +10,6 @@ Source0:        %{url}/archive/%{name}-%{version}.tar.gz
 Packager:       Olivia <git@olivia.sh>
 
 BuildRequires:  cargo
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  mold
 Requires:       niri
 

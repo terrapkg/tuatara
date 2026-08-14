@@ -11,8 +11,6 @@ SourceLicense:  GPL-3.0-or-later
 License:        (BSD-3-Clause OR MIT OR Apache-2.0) AND Unlicense AND Apache-2.0 AND MIT AND (MIT OR Apache-2.0 OR Zlib) AND BSD-2-Clause AND Zlib AND MIT AND (Apache-2.0 OR GPL-2.0-only) AND GPL-3.0 AND ((MIT OR Apache-2.0) AND Unicode-3.0) AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT) AND Apache-2.0 AND MPL-2.0 AND (BSD-2-Clause OR Apache-2.0 OR MIT) AND CC0-1.0 AND BSL-1.0 AND ISC AND BSD-3-Clause AND (MIT OR Apache-2.0 OR LGPL-2.1-or-later) AND (Unlicense OR MIT)
 Provides:       switcheroo-control
 Conflicts:      switcheroo-control
-BuildRequires:  cargo-rpm-macros
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  systemd-devel
 BuildRequires:  libbpf-devel
 BuildRequires:  clang-devel

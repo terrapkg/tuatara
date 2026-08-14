@@ -35,7 +35,6 @@ BuildRequires: pkgconfig(egl)
 BuildRequires: libadwaita-devel
 BuildRequires: desktop-file-utils
 BuildRequires: blueprint-compiler
-BuildRequires: cargo-rpm-macros >= 24
 BuildRequires: gettext
 BuildRequires: desktop-file-utils
 BuildRequires: appstream-data

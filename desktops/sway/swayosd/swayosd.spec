@@ -12,7 +12,6 @@ BuildRequires:  meson
 BuildRequires:  ninja-build
 BuildRequires:  gtk3-devel
 BuildRequires:  gcc
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  rust
 BuildRequires:  cargo
 BuildRequires:  sassc

@@ -14,7 +14,6 @@ License:        GPL-2.0-or-later
 URL:            https://github.com/OpenGamingCollective/xonedo
 Source0:        %{url}/archive/refs/tags/v%{version}-ogc%{ogcversion}.tar.gz
 BuildRequires:  kmodtool
-BuildRequires:  systemd-rpm-macros
 Requires:       %{modulename} = %{?epoch:%{epoch}:}%{version}
 Requires:       %{modulename}-akmod-modules = %{?epoch:%{epoch}:}%{version}
 Requires:       akmods

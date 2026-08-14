@@ -6,7 +6,6 @@ Summary:        A programmer's text editor
 License:        MIT
 URL:            https://github.com/neurocyte/flow
 BuildRequires:  zig
-BuildRequires:  anda-srpm-macros
 Provides:       flow = %epoch:%version-%release
 Obsoletes:      flow-control-nightly < 20250212.9999999
 

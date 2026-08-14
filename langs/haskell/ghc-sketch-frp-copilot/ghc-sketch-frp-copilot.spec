@@ -17,7 +17,6 @@ Source0:        https://hackage.haskell.org/package/%{pkgver}/%{pkgver}.tar.gz
 # End cabal-rpm sources
 
 # Begin cabal-rpm deps:
-BuildRequires:  ghc-rpm-macros
 BuildRequires:  ghc-Cabal-devel
 BuildRequires:  ghc-base-devel
 BuildRequires:  ghc-containers-devel

@@ -16,7 +16,6 @@ BuildRequires:  librsvg2-devel
 BuildRequires:  libtiff-devel
 BuildRequires:  libwebp-devel
 BuildRequires:  libpng-devel
-BuildRequires:  anda-srpm-macros
 Requires:       %{name}-libs%{?_isa} = %{evr}
 Provides:       chafa = %{evr}
 

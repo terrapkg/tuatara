@@ -24,7 +24,6 @@ BuildRequires:  cmake(Plasma)
 BuildRequires:  pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(libei-1.0)
 BuildRequires:  pkgconfig(liblightdm-gobject-1)
-BuildRequires:  systemd-rpm-macros
 Requires: lightdm
 Requires: plasma-workspace
 Requires: polkit

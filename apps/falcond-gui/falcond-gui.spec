@@ -8,8 +8,6 @@ SourceLicense:  MIT
 License:        (Apache-2.0 OR MIT) AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT) AND CC0-1.0 AND ISC AND (MIT OR Apache-2.0) AND MIT AND (Unlicense OR MIT)
 URL:            https://git.pika-os.com/general-packages/falcond-gui
 Source0:        %{url}/archive/v%{version}.tar.gz
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  desktop-file-utils
 BuildRequires:  gtk4-devel
 BuildRequires:  libadwaita-devel

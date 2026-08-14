@@ -8,7 +8,6 @@ License:       BSD-2-Clause
 URL:           https://yarnpkg.com
 Source0:       https://github.com/yarnpkg/berry/archive/refs/tags/@yarnpkg/cli/%{version}.tar.gz
 Patch0:        setup-ts-cache.patch
-BuildRequires: anda-srpm-macros
 BuildRequires: nodejs
 BuildRequires: nodejs-packaging
 %if %{with bootstrap}

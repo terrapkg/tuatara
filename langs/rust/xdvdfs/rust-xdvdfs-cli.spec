@@ -14,9 +14,6 @@ Source:         %{terra_crates_source}
 Source1:		https://raw.githubusercontent.com/antangelo/xdvdfs/v%version/LICENSE
 Packager:		madonuko <mado@fyralabs.com>
 
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros >= 24
-
 %global _description %{expand:
 Tool for interacting with XISO/XDVDFS images.}
 

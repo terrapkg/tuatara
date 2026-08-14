@@ -7,8 +7,6 @@ Summary:        A TUI for controlling and monitoring Framework Computers hardwar
 URL:            https://github.com/grouzen/framework-tool-tui
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 License:        MIT AND (0BSD OR MIT OR Apache-2.0) AND (Apache-2.0 OR BSL-1.0) AND (MIT OR Apache-2.0) AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT) AND BSD-3-Clause AND (MIT OR Apache-2.0) AND (MIT OR Zlib OR Apache-2.0) AND MPL-2.0 AND Zlib AND (Unlicense OR MIT)
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  pkgconfig(libudev)
 BuildArch:      x86_64
 

@@ -28,7 +28,6 @@ URL:            %{gourl}
 Source:         %{gosource}
 BuildRequires:  gcc-c++
 BuildRequires:  python3-devel
-BuildRequires:  python-rpm-macros
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools) >= 61.0
 BuildRequires:  python3dist(wheel) >= 0.37.1

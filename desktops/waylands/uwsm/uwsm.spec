@@ -10,12 +10,10 @@ BuildArch:      noarch
 License:        MIT
 BuildRequires:  desktop-file-utils
 BuildRequires:  meson
-BuildRequires:  python-rpm-macros
 BuildRequires:  python3
 BuildRequires:  python3-dbus
 BuildRequires:  python3-pyxdg
 BuildRequires:  scdoc
-BuildRequires:  systemd-rpm-macros
 
 Requires:       python3
 Requires:       python3-dbus

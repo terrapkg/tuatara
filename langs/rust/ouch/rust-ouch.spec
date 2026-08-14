@@ -15,7 +15,6 @@ Source:         %{terra_crates_source}
 # Automatically generated patch to strip dependencies and normalize metadata
 %dnl Patch:          ouch-fix-metadata-auto.diff
 
-BuildRequires:  anda-srpm-macros cargo-rpm-macros >= 24
 BuildRequires:  gcc-c++
 BuildRequires:  clang-devel
 

@@ -11,7 +11,6 @@ Source0:   http://archive.ubuntu.com/ubuntu/pool/universe/g/gnome-session/unity-
 Source1:   https://salsa.debian.org/gnome-team/gnome-session/-/raw/ubuntu/master/debian/data/run-systemd-session
 BuildArch: noarch
 
-BuildRequires: systemd-rpm-macros
 BuildRequires: binutils
 BuildRequires: zstd
 Requires:      dbus-tools

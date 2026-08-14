@@ -9,7 +9,6 @@ License:        GPL-3.0-or-later AND (MIT OR Apache-2.0) AND Unicode-3.0 AND (0B
 URL:            https://github.com/kavehtehrani/cloudflare-speed-cli
 Source0:        %url/archive/refs/tags/v%version.tar.gz
 
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  mold
 
 %description

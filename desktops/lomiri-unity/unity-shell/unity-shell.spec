@@ -37,7 +37,6 @@ BuildRequires:	pkgconfig(nux-4.0)
 BuildRequires:	compiz9-devel
 BuildRequires:	pkgconfig(unity-misc)
 BuildRequires:	chrpath
-BuildRequires:	systemd-rpm-macros
 BuildRequires:	pkgconfig(libunity-settings-daemon)
 Requires:	python3-gobject
 Requires:	dconf

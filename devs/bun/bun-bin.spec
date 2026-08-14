@@ -15,7 +15,7 @@ License:		MIT
 URL:			https://bun.sh
 Source0:		https://github.com/oven-sh/bun/releases/download/bun-v%version/bun-linux-%a.zip
 Source1:        sh.oven.bun.metainfo.xml
-BuildRequires:	unzip anda-srpm-macros terra-appstream-helper
+BuildRequires:	unzip terra-appstream-helper
 
 %description
 %summary.

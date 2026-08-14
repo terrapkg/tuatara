@@ -18,7 +18,6 @@ BuildRequires:  python3-setuptools
 BuildRequires:  python3-pip
 BuildRequires:  python3-importlib-metadata
 BuildRequires:  python3-uv-build
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  python3-ruamel-yaml
 BuildRequires:  desktop-file-utils
 

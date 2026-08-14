@@ -10,7 +10,6 @@ License:        Unlicense
 Source0:        70-wooting.rules
 BuildArch:      noarch
 BuildRequires:  systemd
-BuildRequires:  anda-srpm-macros
 Requires:       systemd-udev
 
 %global udev_order 70

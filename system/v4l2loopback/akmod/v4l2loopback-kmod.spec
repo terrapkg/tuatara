@@ -25,7 +25,6 @@ Source0:        %{url}/archive/v%{version}/%{modulename}-%{version}.tar.gz
 BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  help2man
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  kmodtool
 Requires:       akmods
 Requires:       %{modulename} = %{?epoch:%{epoch}:}%{version}

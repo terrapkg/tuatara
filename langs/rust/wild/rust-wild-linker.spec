@@ -13,7 +13,6 @@ URL:            https://crates.io/crates/wild-linker
 Source:         %{terra_crates_source}
 Source1:        https://github.com/davidlattimore/wild/archive/refs/tags/%version.tar.gz
 
-BuildRequires:  cargo-rpm-macros >= 24
 BuildRequires:  gcc-c++
 
 %global _description %{expand:

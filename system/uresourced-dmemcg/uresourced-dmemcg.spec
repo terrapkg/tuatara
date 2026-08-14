@@ -15,7 +15,6 @@ BuildRequires:  pkgconfig(gio-2.0)
 BuildRequires:  pkgconfig(libpipewire-0.3)
 BuildRequires:  pkgconfig(libsystemd)
 BuildRequires:  pkgconfig(systemd)
-BuildRequires:  systemd-rpm-macros
 
 Provides:       uresourced = %{evr}
 Obsoletes:      uresourced < %{evr}

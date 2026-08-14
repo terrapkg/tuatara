@@ -19,7 +19,6 @@ Source0:        https://cache.agilebits.com/dist/1P/op2/pkg/v%{version}/op_linux
 Source1:        1password-cli.sysusers
 ExclusiveArch:  x86_64 aarch64
 
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  unzip
 Requires(post): /usr/bin/chown
 Requires(post): /usr/bin/chmod

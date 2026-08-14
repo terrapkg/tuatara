@@ -5,8 +5,6 @@ Summary:       Lets you run Stremio server in the background
 License:       GPL-2.0-only AND MPL-2.0 AND (Apache-2.0 OR MIT) AND (Zlib OR Apache-2.0 OR MIT) AND BSD-3-Clause AND (Unlicense OR MIT) AND Unicode-3.0 AND (0BSD OR MIT OR Apache-2.0) AND (MIT OR Zlib OR Apache-2.0) AND (MIT OR Apache-2.0 OR LGPL-2.1-or-later) AND CC0-1.0 AND ISC AND MIT AND (BSD-3-Clause OR MIT OR Apache-2.0) AND Apache-2.0 AND MIT AND (Apache-2.0 OR BSL-1.0) AND (BSD-2-Clause OR Apache-2.0 OR MIT) AND (Apache-2.0 OR ISC OR MIT) AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT)
 URL:           https://github.com/Stremio/stremio-service
 Source0:       %url/archive/refs/tags/v%{version}.tar.gz
-BuildRequires: anda-srpm-macros
-BuildRequires: cargo-rpm-macros
 BuildRequires: gcc
 BuildRequires: cargo
 BuildRequires: pkgconfig(gdk-3.0)

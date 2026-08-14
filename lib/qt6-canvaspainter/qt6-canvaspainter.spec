@@ -21,7 +21,6 @@ BuildRequires:      cmake(Qt6ShaderTools)
 BuildRequires:      cmake(Qt6ShaderToolsPrivate)
 BuildRequires:      cmake(Qt6Widgets)
 BuildRequires:      cmake(Qt6WidgetsPrivate)
-BuildRequires:      kf6-rpm-macros
 BuildSystem:        cmake
 
 Packager:           Owen Zimmerman <owen@fyralabs.com>

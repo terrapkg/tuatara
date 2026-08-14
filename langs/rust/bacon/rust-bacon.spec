@@ -16,7 +16,6 @@ Source:         %{terra_crates_source}
 
 BuildRequires:  anda-srpm-macros 
 BuildRequires:  mold
-BuildRequires:  cargo-rpm-macros >= 24
 BuildRequires:  alsa-lib-devel
 
 %global _description %{expand:

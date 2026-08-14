@@ -11,11 +11,9 @@ License:        Apache-2.0
 URL:            https://github.com/pi-top/pi-topd
 Source0:        %{url}/archive/refs/tags/v%{ver}.tar.gz
 Source1:        Apache-2.0.txt
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)
-BuildRequires:  systemd-rpm-macros
 BuildArch:      noarch
 Packager:       Owen Zimmerman <owen@fyralabs.com>
 

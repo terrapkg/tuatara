@@ -21,7 +21,6 @@ URL:            %{gourl}
 Source:         %{gosource}
 Packager:       sadlerm <lerm@chromebooks.lol>
 
-BuildRequires:  anda-srpm-macros
 
 Provides:       lazygit = %{evr}
 

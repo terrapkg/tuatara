@@ -12,7 +12,6 @@ Source0:        %{url}/archive/%{commit}.tar.gz#/%{name}-%{shortcommit}.tar.gz
 Source1:        com.github.rs50.metainfo.xml
 Source2:        logi-rs50-proton-setup.sh
 Source3:        README.terra.md
-BuildRequires:  systemd-rpm-macros
 Recommends:     trueforce-sdk
 Requires:       %{name}-kmod = %{?epoch:%{epoch}:}%{version}
 Provides:       %{name}-kmod-common = %{?epoch:%{epoch}:}%{version}

@@ -15,8 +15,6 @@ Source:         %{terra_crates_source}
 # Automatically generated patch to strip dependencies and normalize metadata
 Patch:          television-fix-metadata-auto.diff
 
-BuildRequires:  cargo-rpm-macros >= 24
-
 %global _description %{expand:
 A very fast, portable and hackable fuzzy finder for the terminal.}
 

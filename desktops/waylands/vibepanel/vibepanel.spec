@@ -8,7 +8,6 @@ SourceLicense:  MIT
 License:        %{sourcelicense} AND (Apache-2.0 OR ISC OR MIT) AND (Apache-2.0 OR MIT) AND (MIT OR Apache-2.0 OR Zlib) AND (0BSD OR MIT OR Apache-2.0) AND ((MIT OR Apache-2.0) AND Unicode-3.0) AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT) AND Apache-2.0 AND MPL-2.0 AND (BSD-2-Clause OR Apache-2.0 OR MIT) AND CC0-1.0 AND Apache-2.0 AND ISC AND (BSD-3-Clause OR Apache-2.0) AND ISC AND (MIT OR Apache-2.0 OR LGPL-2.1-or-later) AND (Unlicense OR MIT)
 
 BuildRequires:  rust
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  gcc
 BuildRequires:  gtk4-devel
 BuildRequires:  gtk4-layer-shell-devel

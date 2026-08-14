@@ -27,7 +27,6 @@ Source2:        1password.sysusers
 ExclusiveArch:  x86_64 aarch64
 
 BuildRequires:  desktop-file-utils
-BuildRequires:  systemd-rpm-macros
 Requires:       desktop-file-utils
 Requires:       gtk3
 Requires:       hicolor-icon-theme

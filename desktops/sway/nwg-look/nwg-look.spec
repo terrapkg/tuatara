@@ -17,7 +17,6 @@ Packager:       Owen Zimmerman <owen@fyralabs.com>
 
 BuildRequires:  golang
 BuildRequires:  gcc
-BuildRequires:  go-rpm-macros
 BuildRequires:  make
 BuildRequires:  pkgconfig(gio-2.0)
 BuildRequires:  pkgconfig(glib-2.0)

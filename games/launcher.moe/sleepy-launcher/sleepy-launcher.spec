@@ -35,8 +35,6 @@ BuildRequires: cmake
 BuildRequires: gcc clang-devel mold
 BuildRequires: rust-packaging
 BuildRequires: desktop-file-utils
-BuildRequires: anda-srpm-macros
-BuildRequires: cargo-rpm-macros
 
 
 %description

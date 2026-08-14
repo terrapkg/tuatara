@@ -15,7 +15,7 @@ Source:         %{terra_crates_source}
 # Automatically generated patch to strip dependencies and normalize metadata
 Patch:          bandwhich-fix-metadata-auto.diff
 
-BuildRequires:  anda-srpm-macros mold cargo-rpm-macros >= 24
+BuildRequires:  anda-srpm-macros mold
 
 %global _description %{expand:
 Display current network utilization by process, connection and remote

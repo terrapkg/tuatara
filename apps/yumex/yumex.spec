@@ -25,7 +25,6 @@ BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(gtk4)
 BuildRequires: pkgconfig(libadwaita-1)
 BuildRequires: pkgconfig(pygobject-3.0)
-BuildRequires: systemd-rpm-macros
 
 Requires: python3-gobject
 Requires: libadwaita >= 1.6

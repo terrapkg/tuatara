@@ -13,7 +13,6 @@ URL:            https://github.com/OpenGamingCollective/gamescope-session
 Source0:        %url/archive/%commit.tar.gz
 Requires:       gamescope
 Recommends:     (cardwire or switcheroo-control)
-BuildRequires:  systemd-rpm-macros
 Packager:       Tulip Blossom <tulilirockz@outlook.com>
 BuildArch:      noarch
 

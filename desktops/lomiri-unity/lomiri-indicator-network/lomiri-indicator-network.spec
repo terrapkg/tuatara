@@ -10,7 +10,6 @@ License:    GPL-3.0 AND LGPL-3.0
 URL:        https://gitlab.com/ubports/development/core/lomiri-indicator-network
 Source0:    %{url}/-/archive/%commit/lomiri-indicator-network-%commit.tar.gz
 
-BuildRequires: systemd-rpm-macros
 BuildRequires: qt-devel
 BuildRequires: doxygen
 BuildRequires: qt5-doctools

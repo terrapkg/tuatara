@@ -25,7 +25,6 @@ BuildRequires:  libcurl-devel
 BuildRequires:  boost-devel
 BuildRequires:  libappimage-devel
 BuildRequires:  libappimageupdate-devel
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  librsvg2-devel
 BuildRequires:  libqtxdg-devel
 

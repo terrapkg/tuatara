@@ -18,7 +18,6 @@ Source0:       %{url}/archive/%{commit}/%{modulename}-%{commit}.tar.gz#/%{module
 BuildRequires: gcc
 BuildRequires: kmodtool
 BuildRequires: make
-BuildRequires: systemd-rpm-macros
 Requires:      %{modulename} = %{?epoch:%{epoch}:}%{version}
 Requires:      %{modulename}-akmod-modules
 Requires:      akmods

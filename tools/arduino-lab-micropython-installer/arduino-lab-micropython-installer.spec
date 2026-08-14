@@ -10,7 +10,6 @@ Source0:        %url/archive/refs/tags/v%version.tar.gz
 Source1:        micropython-installer.desktop
 Packager:       Owen Zimmerman <owen@fyralabs.com>
 Requires:       libdrm libxcb
-BuildRequires:  anda-srpm-macros
 BuildRequires:  desktop-file-utils
 BuildRequires:  pnpm
 Provides:       arduino-lab-micropython-installer

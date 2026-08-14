@@ -16,8 +16,6 @@ BuildRequires:  cargo
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  mold
-BuildRequires:  anda-srpm-macros
-BuildRequires:  cargo-rpm-macros
 
 BuildRequires:  fontconfig-devel
 BuildRequires:  glibc

@@ -19,7 +19,6 @@ BuildRequires:  qt6-qtconnectivity-devel
 BuildRequires:  qt6-qtmultimedia-devel
 BuildRequires:  qt6-qtdeclarative-devel
 BuildRequires:  openssl-devel
-BuildRequires:  anda-srpm-macros
 BuildRequires:  terra-appstream-helper
 
 Requires: glibc

@@ -17,7 +17,6 @@ Source4:        https://raw.githubusercontent.com/terrapkg/pkg-java-binfmt/%{com
 Source5:        https://raw.githubusercontent.com/terrapkg/pkg-java-binfmt/%{commit}/Applet.conf
 Source6:        https://raw.githubusercontent.com/terrapkg/pkg-java-binfmt/%{commit}/Applet-lib64.conf
 BuildRequires:  gcc
-BuildRequires:  systemd-rpm-macros
 Packager:       Gilver E. <roachy@fyralabs.com>
 
 %description

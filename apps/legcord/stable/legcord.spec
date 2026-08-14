@@ -16,7 +16,7 @@ Requires:       xdg-utils
 Obsoletes:      armcord < 3.3.2-1
 Obsoletes:      legcord-bin < 1.1.5-2
 Conflicts:      legcord-nightly
-BuildRequires:  anda-srpm-macros pnpm nodejs-npm git-core gcc gcc-c++ make desktop-file-utils zlib-ng-compat-devel
+BuildRequires:  pnpm nodejs-npm git-core gcc gcc-c++ make desktop-file-utils zlib-ng-compat-devel
 
 %description
 Legcord is a custom client designed to enhance your Discord experience

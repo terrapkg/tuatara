@@ -12,7 +12,7 @@ License:        ISC
 
 # The Requires and BuildRequires are duplicated because they are used both
 # at build and runtime.
-BuildRequires:  anda-srpm-macros gcc make
+BuildRequires:  gcc make
 BuildRequires:  sqlite-devel
 BuildRequires:  gumbo-parser-devel
 BuildRequires:  expat-devel

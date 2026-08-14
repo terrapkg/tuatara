@@ -16,8 +16,7 @@ License:        MIT
 URL:            https://elkowar.github.io/eww
 Source0:		https://github.com/elkowar/eww/archive/%commit.tar.gz
 
-BuildRequires:  cargo-rpm-macros >= 24
-BuildRequires:  anda-srpm-macros
+BuildRequires: >= 24
 BuildRequires:  pkgconfig(dbusmenu-gtk3-0.4)
 BuildRequires:  pkgconfig(gtk-layer-shell-0)
 Requires:       (%name-x11 or %name-wayland)

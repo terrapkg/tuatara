@@ -10,7 +10,7 @@ Summary:        A Linux installer backend with support for SquashFS and OCI inst
 License:        GPL-3.0
 URL:            https://github.com/Vanilla-OS/Albius
 Source0:        %url/archive/%commit/albius-%commit.tar.gz
-BuildRequires:  go anda-srpm-macros btrfs-progs-devel pkgconfig(devmapper) pkgconfig(gpgme) lvm2 gcc
+BuildRequires:  go btrfs-progs-devel pkgconfig(devmapper) pkgconfig(gpgme) lvm2 gcc
 
 %description
 Albius is a Linux installer backend originally designed for Vanilla OS,

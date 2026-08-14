@@ -10,10 +10,8 @@ BuildRequires: make
 BuildRequires: gcc
 BuildRequires: kernel-headers
 BuildRequires: glibc-headers
-BuildRequires: cmake-rpm-macros
 BuildRequires: cmake
 BuildRequires: gcc-c++
-BuildRequires: systemd-rpm-macros
 Requires: kernel-core
 Requires: systemd-udev
 Requires: coreutils

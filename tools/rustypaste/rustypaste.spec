@@ -8,12 +8,9 @@ License:       MIT AND Apache-2.0 AND (Apache-2.0 OR MIT) AND BSD-3-Clause AND (
 URL:           https://github.com/orhun/rustypaste
 Source0:       %url/archive/refs/tags/v%{version}.tar.gz
 
-BuildRequires: anda-srpm-macros
-BuildRequires: cargo-rpm-macros
 BuildRequires: gcc
 BuildRequires: cargo
 BuildRequires: mold
-BuildRequires: systemd-rpm-macros
 
 Packager:      Owen Zimmerman <owen@fyralabs.com>
 

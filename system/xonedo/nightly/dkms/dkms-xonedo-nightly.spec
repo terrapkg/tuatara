@@ -17,7 +17,6 @@ URL:            https://github.com/OpenGamingCollective/xonedo
 Source0:        %{url}/archive/%{commit}.tar.gz#/%{modulename}-%{shortcommit}.tar.gz
 Source1:        no-weak-modules.conf
 BuildRequires:  sed
-BuildRequires:  systemd-rpm-macros
 Requires:       %{modulename}-nightly = %{?epoch:%{epoch}:}%{version}
 Requires:       dkms
 Conflicts:      akmod-%{modulename}-nightly

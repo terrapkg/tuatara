@@ -13,7 +13,6 @@ Source0:       https://raw.githubusercontent.com/terrapkg/pkg-neovim-default-edi
 Source1:       https://raw.githubusercontent.com/terrapkg/pkg-neovim-default-editor/%{commit}/neovim-default-editor.sh
 Source2:       https://raw.githubusercontent.com/terrapkg/pkg-neovim-default-editor/%{commit}/neovim-default-editor.fish
 # For EVR macro
-BuildRequires: anda-srpm-macros
 Requires:      default-editor
 Requires:      neovim
 # All default editor packages MUST provide this

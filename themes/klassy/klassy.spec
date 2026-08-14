@@ -20,10 +20,8 @@ BuildRequires:  cmake >= 3.16
 BuildRequires:  extra-cmake-modules >= 5.102.0
 BuildRequires:  gettext
 
-BuildRequires:  kf5-rpm-macros
 BuildRequires:  kf5-filesystem
 
-BuildRequires:  kf6-rpm-macros
 BuildRequires:  kf6-filesystem
 
 BuildRequires:  cmake(Qt5Widgets)

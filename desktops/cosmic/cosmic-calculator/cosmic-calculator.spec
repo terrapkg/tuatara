@@ -8,7 +8,6 @@ License:        (BSD-3-Clause OR MIT OR Apache-2.0) AND Apache-2.0 AND MIT AND (
 Summary:        Calculator for the COSMIC desktop
 URL:            https://github.com/cosmic-utils/calculator
 Source0:        %{url}/archive/refs/tags/%{version}.tar.gz
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  pkgconfig(xkbcommon)
 Requires:       cosmic-osd
 Packager:       Owen Zimmerman <owen@fyralabs.com>

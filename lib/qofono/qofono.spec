@@ -11,7 +11,6 @@ Patch1:     https://sources.debian.org/data/main/libq/libqofono/0.120-1/debian/p
 Patch2:     https://sources.debian.org/data/main/libq/libqofono/0.120-1/debian/patches/2001_path-adjustments.patch
 Patch3:     https://sources.debian.org/data/main/libq/libqofono/0.120-1/debian/patches/1004_desktop-file-fields.patch
 
-BuildRequires:  qt5-rpm-macros
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  make
 BuildRequires:  gcc-c++

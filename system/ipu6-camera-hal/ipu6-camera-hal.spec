@@ -19,7 +19,6 @@ Source4:        ipu6-driver-select.sh
 ### RPM Fusion | [ipu6-camera-hal] Fix build with gcc15
 ## https://lists.rpmfusion.org/archives/list/rpmfusion-commits@lists.rpmfusion.org/thread/TDMTM3WHMTHKCIN3XAUVWK3OBARW5SKO
 Patch0:         0001-Drop-Werror.patch
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  ipu6-camera-bins-devel >= 0.0-11
 BuildRequires:  cmake
 BuildRequires:  gcc

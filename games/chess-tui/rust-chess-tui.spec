@@ -12,7 +12,6 @@ License:        MIT
 URL:            https://crates.io/crates/chess-tui
 Source:         %{terra_crates_source}
 
-BuildRequires:  cargo-rpm-macros >= 24
 BuildRequires:  pkgconfig(openssl)
 
 %global _description %{expand:

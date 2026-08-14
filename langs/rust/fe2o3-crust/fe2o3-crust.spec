@@ -9,7 +9,6 @@ URL:            https://github.com/isene/crust
 Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 Source1:        https://unlicense.org/UNLICENSE
 License:        Unlicense AND (Apache-2.0 OR MIT) AND MIT AND (Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT)
-BuildRequires:  cargo-rpm-macros
 Requires:       %{name}-devel
 
 Packager:       Owen Zimmerman <owen@fyralabs.com>

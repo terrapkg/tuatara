@@ -22,7 +22,6 @@ BuildRequires:  kf6-kwindowsystem-devel
 BuildRequires:  kf6-kconfig-devel
 BuildRequires:  kf6-kdbusaddons-devel
 BuildRequires:  kf6-kitemmodels-devel
-BuildRequires:  systemd-rpm-macros
 
 Requires:       qt6-qtbase
 Requires:       kf6-kwindowsystem

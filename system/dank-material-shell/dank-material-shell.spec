@@ -9,9 +9,7 @@ License:        Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND GPL-3.0-only AN
 URL:            https://danklinux.com/
 Source0:        https://github.com/AvengeMedia/%{name}/archive/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:  go-rpm-macros
 BuildRequires:  go-vendor-tools
-BuildRequires:  systemd-rpm-macros
 
 Requires:       accountsservice
 Requires:       cups-pk-helper

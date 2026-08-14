@@ -8,7 +8,6 @@ License:       BSD-2-Clause
 URL:           https://holyc-lang.com
 Source0:       https://github.com/Jamesbarford/holyc-lang/archive/refs/tags/v%{ver}.tar.gz
 BuildRequires: cmake
-BuildRequires: cmake-rpm-macros
 BuildRequires: gcc
 BuildRequires: gcc-c++
 BuildRequires: sqlite-devel

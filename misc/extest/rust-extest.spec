@@ -34,13 +34,10 @@ Source1:        override_steam_desktop_file.sh
 
 Packager:       Cappy Ishihara <cappy@fyralabs.com>
 
-BuildRequires:  cargo-rpm-macros >= 24
-BuildRequires:  anda-srpm-macros
 BuildRequires:  openssl-devel
 BuildRequires:  gcc
 BuildRequires:  perl
 BuildRequires:  rust-packaging
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  clang
 BuildRequires:  mold
 Recommends:     %{name}-steam

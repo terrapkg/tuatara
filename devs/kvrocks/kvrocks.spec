@@ -13,7 +13,6 @@ BuildRequires:  gcc-c++
 BuildRequires:  git
 BuildRequires:  openssl-devel
 BuildRequires:  python3
-BuildRequires:  systemd-rpm-macros
 
 %description
 Apache Kvrocks is a distributed key value NoSQL database that uses RocksDB as storage

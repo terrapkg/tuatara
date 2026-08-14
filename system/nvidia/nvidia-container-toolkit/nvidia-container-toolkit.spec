@@ -8,7 +8,6 @@ URL:              https://github.com/NVIDIA/nvidia-container-toolkit
 Source0:          https://github.com/NVIDIA/%{name}/archive/v%{version}/nvidia-container-toolkit-v%{version}.tar.gz
 BuildRequires:    containers-common
 BuildRequires:    golang >= 1.16
-BuildRequires:    systemd-rpm-macros
 Requires:         libnvidia-container-tools
 Requires(post):   systemd
 Requires(postun): systemd

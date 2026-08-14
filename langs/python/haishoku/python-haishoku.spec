@@ -11,7 +11,6 @@ Summary:        A development tool for grabbing the dominant color or representa
 License:        MIT
 URL:            https://github.com/LanceGin/haishoku
 Source0:        %{pypi_source}
-BuildRequires:  pyproject-rpm-macros
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(setuptools)

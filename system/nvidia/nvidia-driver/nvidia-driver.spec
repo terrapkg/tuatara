@@ -36,7 +36,6 @@ BuildRequires:  python(abi) >= 3.9
 %else
 BuildRequires:  python3
 %endif
-BuildRequires:  systemd-rpm-macros
 %endif
 BuildRequires:  wget
 BuildRequires:  coreutils

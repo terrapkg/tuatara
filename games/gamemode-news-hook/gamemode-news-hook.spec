@@ -11,7 +11,6 @@ Source0:        %{url}/archive/refs/tags/v%{version}.tar.gz
 Packager:       Kyle Gospodnetich <me@kylegospodneti.ch>
 
 BuildArch:      noarch
-BuildRequires:  systemd-rpm-macros
 
 Requires:       python3
 Recommends:     python3-systemd

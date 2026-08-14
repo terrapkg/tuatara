@@ -6,7 +6,7 @@ License:        GPL-3.0
 URL:            https://github.com/Lurkki14/tuxclocker
 # boost qt5-qtbase qt5-qtcharts
 Requires:       hicolor-icon-theme
-BuildRequires:  git-core meson hwdata qt5-qttools gettext anda-srpm-macros
+BuildRequires:  git-core meson hwdata qt5-qttools gettext
 BuildRequires:  boost-devel qt5-qtbase-devel qt5-qtcharts-devel libdrm-devel libXNVCtrl-devel openssl-devel
 Recommends:     xorg-x11-drv-nvidia libdrm libXNVCtrl hwdata
 

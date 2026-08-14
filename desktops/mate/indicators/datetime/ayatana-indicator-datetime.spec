@@ -9,7 +9,6 @@ Source0:    %{url}/archive/refs/tags/%{version}.tar.gz
 BuildRequires:  cmake
 BuildRequires:  cmake-extras
 BuildRequires:  gcc-c++
-BuildRequires:  systemd-rpm-macros
 BuildRequires:  pkgconfig(lomiri-url-dispatcher)
 BuildRequires:  pkgconfig(lomiri-schemas)
 BuildRequires:  pkgconfig(libayatana-common)

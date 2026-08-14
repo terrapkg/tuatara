@@ -20,7 +20,6 @@ BuildRequires:  rust-gdk-pixbuf-sys-devel
 BuildRequires:  glib2-devel
 BuildRequires:  openssl-devel
 BuildRequires:  desktop-file-utils
-BuildRequires:  anda-srpm-macros
 BuildRequires:  terra-appstream-helper
 
 Provides:       NeoHtop
