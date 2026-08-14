@@ -1,13 +1,13 @@
-%global commit 2092db19f7b40854e0427a1b2e39eda9f8d0c3cd
+%global commit 
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20250528
+%global commitdate 
 %global ver 0.5.0
 %global debug_package %{nil}
 %global modulename new-lg4ff
 
 Name:           dkms-%{modulename}
 Version:        %{ver}^%{commitdate}git.%{shortcommit}
-Release:        3%{?dist}
+Release:        1%{?dist}
 Summary:        Logitech force feedback kernel module (DKMS)
 License:        GPL-2.0-only
 URL:            https://github.com/berarma/%{modulename}
