@@ -1,6 +1,6 @@
-%global commit 
+%global commit 982cbcb019ae4d2bee5ae69385223409ee555c88
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 
+%global commitdate 20260315
 %global ver 0.5.7
 %define buildforkernels akmod
 %global debug_package %{nil}
@@ -8,7 +8,7 @@
 
 Name:           %{modulename}-nightly-kmod
 Version:        %{ver}^%{commitdate}git.%{shortcommit}
-Release:        1%{?dist}
+Release:        4%{?dist}
 %if 0%{?fedora} <= 43 || 0%{?rhel} <= 10
 Epoch:          1
 %endif

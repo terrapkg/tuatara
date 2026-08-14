@@ -1,6 +1,6 @@
-%global commit 
+%global commit 8187920ed261c7024826f8204cc7bea45153a3da
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 
+%global commitdate 20260310
 %global ver 0.83
 
 %define buildforkernels akmod
@@ -9,7 +9,7 @@
 
 Name:           %{modulename}-kmod
 Version:        %{ver}^%{commitdate}git.%{shortcommit}
-Release:        1%{?dist}
+Release:        4%{?dist}
 Summary:        Thrustmaster Force Feedback kernel module
 License:        GPL-2.0-only
 URL:            https://github.com/Kimplul/%{modulename}

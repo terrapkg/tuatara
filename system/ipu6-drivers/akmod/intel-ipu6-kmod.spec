@@ -1,11 +1,11 @@
 %global buildforkernels akmod
 %global debug_package %{nil}
-%global commit 
+%global commit c09fa9a6e98b951ea4ab9d4100aa85281a659074
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 
+%global commit_date 20260714
 %global modulename intel-ipu6
 # Actual "release" version, currently unused as the release versions are back and forth on if on if they use 1.0.0 or 1.0.1
-%global ver 
+%global ver 1.0.1
 
 Name:           %{modulename}-kmod
 Summary:        Akmods module for %{modulename}

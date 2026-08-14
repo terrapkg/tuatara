@@ -1,6 +1,6 @@
-%global commit 
+%global commit da247eb378287b435fa2963bfaee634bda96caac
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 
+%global commitdate 20260627
 %global ver 1.0
 %global modulename xpad-noone
 %global debug_package %{nil}
@@ -10,7 +10,7 @@ This is the original upstream xpad driver from the Linux kernel with support for
 
 Name:          %{modulename}-kmod
 Version:       %{ver}^%{commitdate}git.%{shortcommit}
-Release:       1%{?dist}
+Release:       7%{?dist}
 License:       GPL-2.0-or-later
 Summary:       xpad driver with support for XBox One controllers removed
 URL:           https://github.com/Jan200101/xpad-noone

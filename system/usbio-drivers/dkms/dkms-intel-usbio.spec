@@ -1,12 +1,12 @@
-%global commit 
+%global commit ee221ecae757d43ab3fb39433f389373b2026109
 %global shortcommit %{sub %{commit} 1 7}
-%global commit_date 
+%global commit_date 20251031
 %global debug_package %{nil}
 %global modulename intel-usbio
 
 Name:       dkms-%{modulename}
 Version:    0^%{commit_date}git.%{shortcommit}
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Kernel drivers for the USBIO Extension
 License:    GPL-2.0-only
 URL:        https://github.com/intel/usbio-drivers

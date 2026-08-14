@@ -1,14 +1,14 @@
 %global buildforkernels akmod
 %global debug_package %{nil}
-%global commit 
+%global commit ee221ecae757d43ab3fb39433f389373b2026109
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 
+%global commit_date 20251031
 %global modulename intel-usbio
 
 Name:           %{modulename}-kmod
 Summary:        Kernel drivers for the USBIO Extension
 Version:        0^%{commit_date}git.%{shortcommit}
-Release:        1%{?dist}
+Release:        4%{?dist}
 License:        GPL-2.0-only
 URL:            https://github.com/intel/usbio-drivers
 Source0:        %{url}/archive/%{commit}.tar.gz#/usbio-drivers-%{shortcommit}.tar.gz
