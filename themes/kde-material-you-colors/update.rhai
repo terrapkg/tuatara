@@ -3,7 +3,7 @@ import "andax/spec.rhai" as spec;
 
 rpm.version(find(`version = \"([\d.]+)\"`, gh_rawfile("luisbocanegra/kde-material-you-colors", "main", "pyproject.toml"), 1));
 
-open_file("anda/themes/kde-material-you-colors/VERSION_qt6-qtbase.txt", "w").write(bump::bodhi("qt6-qtbase", bump::as_bodhi_ver(labels.branch)));
+open_file("themes/kde-material-you-colors/VERSION_qt6-qtbase.txt", "w").write(bump::bodhi("qt6-qtbase", bump::as_bodhi_ver(labels.branch)));
 
 let dir = sub(`/[^/]+$`, "", __script_path);
 if sh("[[ `git status " + dir + " --porcelain` ]] && exit 1 || exit 0", #{}).ctx.rc == 1 {

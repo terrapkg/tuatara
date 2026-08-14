@@ -1,12 +1,12 @@
-let c = sh("cat anda/system/xone/nightly/kmod-common/xone-nightly.spec | grep '%global commit ' | sed -E 's/.+commit //'", #{"stdout": "piped"}).ctx.stdout;
+let c = sh("cat system/xone/nightly/kmod-common/xone-nightly.spec | grep '%global commit ' | sed -E 's/.+commit //'", #{"stdout": "piped"}).ctx.stdout;
 c.pop();
 rpm.global("commit", c);
 if rpm.changed() {
     rpm.release();
-    let d = sh("cat anda/system/xone/nightly/kmod-common/xone-nightly.spec | grep '%global commitdate' | sed -E 's/.+commitdate //'", #{"stdout": "piped"}).ctx.stdout;
+    let d = sh("cat system/xone/nightly/kmod-common/xone-nightly.spec | grep '%global commitdate' | sed -E 's/.+commitdate //'", #{"stdout": "piped"}).ctx.stdout;
     d.pop();
     rpm.global("commitdate", d);
-    let v = sh("cat anda/system/xone/nightly/kmod-common/xone-nightly.spec | grep '%global ver' | sed -E 's/.+ver //'", #{"stdout": "piped"}).ctx.stdout;
+    let v = sh("cat system/xone/nightly/kmod-common/xone-nightly.spec | grep '%global ver' | sed -E 's/.+ver //'", #{"stdout": "piped"}).ctx.stdout;
     v.pop();
     rpm.global("ver", v);
 }
