@@ -67,12 +67,14 @@ jobs:
         if: ${{ matrix.pkg.labels.mock != '1' }}
         run: |
           p=$(rpmspec -q ${{ matrix.pkg.pkg }}/*.spec --buildrequires)
-          if [ $(echo $p | wc -l) -ne 0 ]; then
+          p=${p##[[:space:]]*}
+          if [ ! -z "$p" ]; then
             zypper install --allow-unsigned-rpm -y $p
           fi
           # run again to expand macros
           p=$(rpmspec -q ${{ matrix.pkg.pkg }}/*.spec --buildrequires)
-          if [ $(echo $p | wc -l) -ne 0 ]; then
+          p=${p##[[:space:]]*}
+          if [ ! -z "$p" ]; then
             zypper install --allow-unsigned-rpm -y $p
           fi
 
