@@ -66,8 +66,15 @@ jobs:
       - name: Install build dependencies
         if: ${{ matrix.pkg.labels.mock != '1' }}
         run: |
-          zypper install --allow-unsigned-rpm -y $(rpmspec -q ${{ matrix.pkg.pkg }}/*.spec --buildrequires)
-          zypper install --allow-unsigned-rpm -y $(rpmspec -q ${{ matrix.pkg.pkg }}/*.spec --buildrequires) # run again to expand macros
+          p=$(rpmspec -q ${{ matrix.pkg.pkg }}/*.spec --buildrequires)
+          if [ $(echo $p | wc -l) -ne 0 ]
+            zypper install --allow-unsigned-rpm -y $p
+          fi
+          # run again to expand macros
+          p=$(rpmspec -q ${{ matrix.pkg.pkg }}/*.spec --buildrequires)
+          if [ $(echo $p | wc -l) -ne 0 ]
+            zypper install --allow-unsigned-rpm -y $p
+          fi
 
       - name: Build with Andaman
         run: anda build -D "vendor Terra" -D "__python %{__python3}" ${{ matrix.pkg.pkg }} -c terra-${{ matrix.version }}-${{ matrix.pkg.arch }} ${{ !matrix.pkg.labels.mock == '1' && '-rrpmbuild' || '' }}
