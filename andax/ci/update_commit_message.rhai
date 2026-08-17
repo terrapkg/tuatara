@@ -6,7 +6,7 @@ let filelist = sh(cmd, #{ "stdout": "piped" }).ctx.stdout.split('\n');
 let modified_list = "";
 for file in filelist {
 	if file.is_empty() { continue; }
-	let spec = cfg::load_file(`${file}/anda.hcl`).project.pkg[""].spec;
+	let spec = cfg::load_file(`${file}/anda.hcl`).project[""].rpm.spec;
 	spec.pop(5); // remove `.spec` suffix
 	modified_list += `${spec} `;
 }
