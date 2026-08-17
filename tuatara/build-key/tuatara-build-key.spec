@@ -29,8 +29,6 @@ done
 
 %files
 %defattr(644,root,root)
-%attr(755,root,root) %dir %{_prefix}/lib/rpm/gnupg
-%attr(755,root,root) %dir %{keydir}
 %{keydir}/gpg-pubkey-*.asc
 
 %changelog
