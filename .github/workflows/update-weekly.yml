@@ -6,6 +6,10 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: update-weekly
+  cancel-in-progress: true
+
 jobs:
   autoupdate:
     permissions:
