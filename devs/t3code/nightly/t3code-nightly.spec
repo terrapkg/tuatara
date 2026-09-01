@@ -1,8 +1,8 @@
 %undefine __brp_mangle_shebangs
 
-%global latest_stable_version v0.0.36
-%global commit cefec32d6fc5d14f03e110ebdde534bdbcc9b62b
-%global commit_date 20260831
+%global latest_stable_version v0.0.37
+%global commit c78ae50a5a5fdf8f42d0aaa0103b26ee836f0cfc
+%global commit_date 20260901
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 %global buildnum %(printf '%d' 0x%{shortcommit})
 %global electron_version %{latest_stable_version}-nightly.%{commit_date}.%{buildnum}
