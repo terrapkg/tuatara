@@ -1,15 +1,15 @@
 %global real_name vala-lint
 
-%global commit 28dbf44dd2c5ec2fc7273982d35ff8cb0ef46283
+%global commit 4f7647e8817129be69f452111921baea26a9c67a
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
-%global commit_date 20260224
+%global commit_date 20260904
 %global snapshot_info %{commit_date}.%{shortcommit}
 
 Name:			vala-lint-nightly
 Summary:		Check Vala code files for code-style errors
 Version:		0.1.0^%{snapshot_info}
-Release:		1%?dist
+Release:		1%{?dist}
 License:		GPL-2.0-or-later
 
 URL:			https://github.com/vala-lang/vala-lint
