@@ -83,8 +83,11 @@ jobs:
       - name: Build tuatara-build-key
         run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/build-key
 
-      - name: Build tuatara-appstream-helper
-        run: anda build -D "vendor Tuatara" -D "__python %{__python3}" -rrpmbuild tuatara/appstream-helper
+      - name: Build terra-appstream-helper
+        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/appstream-helper
+
+      - name: Build terra-scripts
+        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/terra-scripts
 
       - name: Build Subatomic
         run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/subatomic
