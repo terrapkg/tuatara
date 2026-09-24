@@ -20,7 +20,7 @@ jobs:
         branch:
           - tumbleweed
     container:
-      image: ghcr.io/terrapkg/builder:tumbleweed
+      image: ghcr.io/terrapkg/tuatara-builder:tumbleweed
       options: --cap-add=SYS_ADMIN --privileged
     steps:
       - name: Checkout

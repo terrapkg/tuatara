@@ -23,7 +23,7 @@ jobs:
     outputs:
       build_matrix: ${{ steps.generate_build_matrix.outputs.build_matrix }}
     container:
-      image: ghcr.io/terrapkg/builder:tumbleweed
+      image: ghcr.io/terrapkg/tuatara-builder:tumbleweed
       options: --cap-add=SYS_ADMIN --privileged
     steps:
       - name: Set workspace as safe
