@@ -2,7 +2,7 @@
 %global __brp_mangle_shebangs_exclude_from ^/usr/src/.*$
 
 Name:           stardust-xr-armillary
-Version:        0.51.1
+Version:        0.52.0
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Model viewer for Stardust XR
