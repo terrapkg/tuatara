@@ -1,5 +1,5 @@
-%global commit 83f26ba0cdcb1bbf807030eaf1bb78f073aaf5ba
-%global commit_date 20260926
+%global commit 56dbd0395473e03596d82a236e0a22bcdda3d4e6
+%global commit_date 20260928
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 # Exclude input files from mangling
