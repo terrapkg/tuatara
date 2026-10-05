@@ -1,6 +1,6 @@
-%global commit f8a226e48755e35a07d53aa32d957e8f8ece2928
+%global commit 1be9c6afc2c0344f81889cc5f899f4726ab1b7ad
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 20261004
+%global commit_date 20261005
 %global ver 0.6.7
 
 # We aren't using Mono but RPM expected Mono
