@@ -1,5 +1,5 @@
 %global appid dev.astramusic.astra
-%global ver v0.7.0-beta
+%global ver v0.8.0-beta
 
 Name:           astra
 %electronmeta -D
