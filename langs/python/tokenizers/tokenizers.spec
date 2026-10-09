@@ -2,7 +2,7 @@
 %global _desc Fast State-of-the-Art Tokenizers optimized for Research and Production.
 
 Name:			python-%{pypi_name}
-Version:		0.23.2
+Version:		0.23.3
 Release:		1%{?dist}
 Summary:		Fast State-of-the-Art Tokenizers optimized for Research and Production
 License:		Apache-2.0
