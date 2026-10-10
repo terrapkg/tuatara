@@ -2,7 +2,7 @@
 %global import_path github.com/FyraLabs/subatomic
 
 Name:           subatomic
-Version:        0.15.12
+Version:        1.1.0
 Release:        1%{?dist}
 Summary:        A modern package delivery system
 
