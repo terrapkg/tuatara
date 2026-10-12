@@ -1,5 +1,5 @@
 %global forgeurl https://gitlab.com/vala-panel-project/vala-panel-appmenu
-%global commit eb3077eac96f0e1836d7d455bf847367c9eb0c2e
+%global commit 1c47efa9fb8542e02aa5beb9dcb10fcf4fdae4ba
 %forgemeta
 
 Name:    vala-panel-appmenu
