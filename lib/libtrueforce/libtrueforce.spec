@@ -1,6 +1,6 @@
-%global commit 972274bdce293419c058eb10b796feb232bfd9ef
+%global commit b2ebb6bf4eae0c1e96bbe3ed6228420b8a7c2d36
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20261008
+%global commitdate 20261023
 %global debug_package %{nil}
 
 Name:           libtrueforce
