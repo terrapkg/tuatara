@@ -1,5 +1,5 @@
 Name:           uupd
-Version:        1.5.3
+Version:        1.5.4
 Release:        1%{?dist}
 Summary:        Centralized update service/checker made for Universal Blue
 License:        Apache-2.0
