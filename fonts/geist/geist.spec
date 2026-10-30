@@ -1,4 +1,4 @@
-%global ver v1.8.2
+%global ver v1.9.0
 
 Name:		    geist-font
 Version:	    %(echo %ver | sed 's/^geist@//')
