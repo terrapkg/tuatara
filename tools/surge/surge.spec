@@ -1,5 +1,5 @@
 %global goipath github.com/SurgeDM/Surge
-Version:        1.3.2
+Version:        0.12.4
 
 %gometa
 
