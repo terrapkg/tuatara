@@ -1,4 +1,4 @@
-%global ver 0.0.16-beta
+%global ver 0.0.17-beta-release
 
 Name:          holyc
 Version:       %(echo "%{ver}" | sed 's/-/~/g')
