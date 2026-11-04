@@ -4,7 +4,7 @@
 %global _desc Python bindings for zeromq.
 
 Name:			python-%{pypi_name}
-Version:		27.2.0
+Version:		27.3.0
 Release:		1%{?dist}
 Summary:		Python bindings for zeromq
 License:		MIT
