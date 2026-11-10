@@ -2,8 +2,8 @@
 
 %global realname hyprland-protocols
 %global ver 0.8.0
-%global commit cd1aba6bd78775825eb230b3a4274c48b6705eb7
-%global commit_date 20261024
+%global commit 32a0b11b6fb1bbca4391e2f764f013394d4ff5a8
+%global commit_date 20261110
 %global shortcommit %{sub %commit 1 7}
 
 Name:           %realname.nightly
