@@ -1,8 +1,8 @@
 %global ver 1.7.0
 
-%global commit          199fb7fe64a34bec44bf059de323f78a4ed122a8
+%global commit          936473c9d804da3999ef191f8febaabacd1834b7
 %global shortcommit     %(c=%{commit}; echo ${c:0:7})
-%global commitdate      20261112
+%global commitdate      20261115
 
 Name:   	noctalia-greeter
 Version:	%{ver}^%{commitdate}git.%{shortcommit}
