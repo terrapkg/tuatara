@@ -72,16 +72,16 @@ $HCC \
 popd
 
 %{__cc} \
-  $CFLAGS \
+  %{build_cflags} \
   -c ./tos.s -o ./tos.o
 
 %{__ar} \
   rcs "$LIBTOS_BUILDDIR/%{_lib}/libtos.a" ./tos.o
 
 %{__cc} \
-  $CFLAGS \
+  %{build_cflags} \
   -shared \
-  $LDFLAGS \
+  %{build_ldflags} \
   -Wl,-Bsymbolic -Wl,-soname,libtos.so.0.0.1 \
   ./tos.o -o "$LIBTOS_BUILDDIR/%{_lib}/libtos.so.0.0.1" -lpthread -lc -lm
 
