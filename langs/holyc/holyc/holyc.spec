@@ -81,7 +81,7 @@ popd
 %{__cc} \
   %{build_cflags} \
   -shared \
-  %{build_ldflags} \
+  %{?build_ldflags} \
   -Wl,-Bsymbolic -Wl,-soname,libtos.so.0.0.1 \
   ./tos.o -o "$LIBTOS_BUILDDIR/%{_lib}/libtos.so.0.0.1" -lpthread -lc -lm
 
