@@ -54,7 +54,6 @@ popd
 done
 
 %cargo_prep_online
-%cargo_license_summary_online
 
 %build
 export ZSTD_SYS_USE_PKG_CONFIG=1
