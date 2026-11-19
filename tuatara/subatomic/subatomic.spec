@@ -12,7 +12,7 @@ Source0:        %url/archive/refs/tags/v%version.tar.gz
 BuildRequires:  cargo-packaging
 BuildRequires:  rustup
 BuildRequires:  pkgconfig(openssl)
-BuildRequires:  pkgconfig(zstd)
+BuildRequires:  pkgconfig(libzstd)
 
 Packager:       Owen Zimmerman <owen@fyralabs.com>
 
