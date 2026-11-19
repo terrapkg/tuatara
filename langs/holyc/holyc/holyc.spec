@@ -53,7 +53,7 @@ popd
   -DCMAKE_INSTALL_PREFIX="%{_prefix}"
 
 %build
-%cmake_build
+%{cmake_build} -C %{__builddir}
 
 HCC="$PWD/hcc"
 LIBTOS_BUILDDIR="$PWD/libtos-build"
