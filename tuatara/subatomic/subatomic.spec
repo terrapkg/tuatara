@@ -11,7 +11,6 @@ Source0:        %url/archive/refs/tags/v%version.tar.gz
 
 BuildRequires:  cargo-packaging
 BuildRequires:  rustup
-BuildRequires:  libopenssl-devel
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(zstd)
 
