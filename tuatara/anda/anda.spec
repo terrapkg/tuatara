@@ -5,7 +5,7 @@
 %global crate anda
 
 Name:           anda
-Version:        0.8.5
+Version:        0.8.15
 Release:        1%{?dist}
 Summary:        Andaman Build toolchain
 SourceLicense:  MIT
@@ -25,7 +25,6 @@ BuildRequires:  mold
 Requires:       rpm-build
 Requires:       createrepo_c
 Requires:       git-core
-Requires:       util-linux
 Packager:       Terra Packaging Team <terra@fyralabs.com>
 
 %description

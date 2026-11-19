@@ -9,8 +9,8 @@ License:        (ISC AND (Apache-2.0 OR ISC)) AND (BSD-3-Clause OR MIT OR Apache
 URL:            https://github.com/FyraLabs/subatomic
 Source0:        %url/archive/refs/tags/v%version.tar.gz
 
+BuildRequires:  cargo-packaging
 BuildRequires:  rustup
-BuildRequires:  cargo-rpm-macros
 BuildRequires:  libopenssl-devel
 BuildRequires:  libzstd-devel
 
