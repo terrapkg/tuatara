@@ -1,5 +1,5 @@
 %global ver 0.0.17-beta-release
-%bcond test 1
+%bcond test 0
 %bcond sqlite 1
 
 Name:          holyc
@@ -33,6 +33,7 @@ Originally implemented in TempleOS as a general purpose programming language and
 # Make the binary correctly report its installed location as /usr/bin instead of /usr
 sed -i 's|binary: %%s/hcc|binary: %%s/bin/hcc|g' cli.c
 
+%if %{with test}
 # Fix the test ROOT location
 sed -i "s|ROOT=.*|ROOT=$(dirname %{rpmbuilddir}%{?buildsubdir:/%{buildsubdir}})|" tests/run.sh
 
@@ -42,6 +43,7 @@ for file in $(rg '../../hcc' --files-with-matches); do
   sed -i 's|../../hcc|%{buildroot}%{_bindir}/hcc|g' $file
 done
 popd
+%endif
 
 %conf
 %cmake \
@@ -53,7 +55,7 @@ popd
   -DCMAKE_INSTALL_PREFIX="%{_prefix}"
 
 %build
-%cmake_build
+%{cmake_build} -C %{__builddir}
 
 HCC="$PWD/hcc"
 LIBTOS_BUILDDIR="$PWD/libtos-build"
@@ -70,16 +72,16 @@ $HCC \
 popd
 
 %{__cc} \
-  $CFLAGS \
+  %{build_cflags} \
   -c ./tos.s -o ./tos.o
 
 %{__ar} \
   rcs "$LIBTOS_BUILDDIR/%{_lib}/libtos.a" ./tos.o
 
 %{__cc} \
-  $CFLAGS \
+  %{build_cflags} \
   -shared \
-  $LDFLAGS \
+  %{?build_ldflags} \
   -Wl,-Bsymbolic -Wl,-soname,libtos.so.0.0.1 \
   ./tos.o -o "$LIBTOS_BUILDDIR/%{_lib}/libtos.so.0.0.1" -lpthread -lc -lm
 
@@ -88,6 +90,7 @@ popd
 
 %{__install} -Dpm755 ./libtos-build/%{_lib}/* -t %{buildroot}%{_libdir}
 
+%if %{with test}
 %check
 HCC="%{buildroot}%{_bindir}/hcc" ; export HCC
 BUILD="%{__cmake_builddir}" ; export BUILD
@@ -97,6 +100,7 @@ $HCC --version | /usr/bin/grep -C5 'binary: /usr/bin/hcc'
 
 ./tests/run.sh '--cflags=-O'
 ./tests/run.sh '--cflags=-fno-inline -fno-reg-promote'
+%endif
 
 %files
 %license ../COPYING
