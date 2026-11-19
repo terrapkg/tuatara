@@ -1,7 +1,7 @@
-%global commit  819b25b0a85301692d673d744fdba39d9cbbfd03
+%global commit  dd0e408e5f8f699739093223873af818b359e161
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global ver v2.5.15
-%global commit_date 20261118
+%global ver v2.5.16
+%global commit_date 20261119
 
 %global goipath         github.com/v2rayA/v2rayA
 Version:                %{ver}^%{commit_date}git.%{shortcommit}
