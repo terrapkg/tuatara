@@ -39,12 +39,14 @@ Next-generation modern RPM repository metadata generator
 %autosetup
 %global _cargo_home %{rpmbuilddir}%{?buildsubdir:/%{buildsubdir}}/.cargo 
 %{__rm} -rf {.cargo/,%{_cargo_home}/} 
-%global _rustup_home %{rpmbuilddir}/.rustup 
+%global _rustup_home %{rpmbuilddir}/.rustup
 %global __cargo . %{_cargo_home}/env && /usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTFLAGS='%{terra_rustflags}' %{_cargo_home}/bin/cargo 
 %global __rustc %{_cargo_home}/bin/rustc 
 %global __rustdoc %{_cargo_home}/bin/rustdoc 
-/usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes rustup-init --default-toolchain nightly -y -q --no-modify-path 
 . %{_cargo_home}/env 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup.sh
+chmod +x rustup.sh
+/usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes ./rustup.sh --default-toolchain nightly -y -q --no-modify-path 
 %bcond rust_nightly 1
 
 for crate in kiritan libsubatomic satm; do
