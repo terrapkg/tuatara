@@ -6,7 +6,7 @@
 
 Name:           libcuobjclient
 Epoch:          1
-Version:        1.2.0.68
+Version:        1.4.0.107
 Release:        1%{?dist}
 Summary:        NVIDIA CUDA cuObject Client
 License:        CUDA Toolkit

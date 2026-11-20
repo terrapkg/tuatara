@@ -1,9 +1,9 @@
 %global forgeurl https://gitlab.com/ubports/development/core/lomiri
-%global commit 9d311f8cd39c2b693a0fe3a256fae7944762b4fe
+%global commit fdba5843bd7a84ed7d84f72ba29507757d2b35b7
 %forgemeta
 
 Name:          lomiri
-Version:       0.6.1
+Version:       0.6.2
 Release:       1%{?dist}
 Summary:       A convergent desktop environment by Ubports
 

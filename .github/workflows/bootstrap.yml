@@ -44,7 +44,7 @@ jobs:
           autoAgreeWithLicenses = yes
           EOF
 
-          zypper install -y wget git-core cargo podman fuse-overlayfs rpm-build util-linux '*-rpm-macros'
+          zypper install -y wget git-core cargo cargo-packaging podman fuse-overlayfs rpm-build util-linux '*-rpm-macros'
 
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -77,11 +77,17 @@ jobs:
       # - name: Install tuatara-mock-configs
       #   run: zypper install --allow-unsigned-rpm -y anda-build/rpm/rpms/tuatara-mock-configs*.rpm
 
-      - name: Build tuatara-release
-        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/release
+      - name: Build tuatara-repos
+        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/repos
 
-      - name: Build tuatara-appstream-helper
-        run: anda build -D "vendor Tuatara" -D "__python %{__python3}" -rrpmbuild tuatara/appstream-helper
+      - name: Build tuatara-build-key
+        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/build-key
+
+      - name: Build terra-appstream-helper
+        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/appstream-helper
+
+      - name: Build terra-scripts
+        run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/terra-scripts
 
       - name: Build Subatomic
         run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/subatomic

@@ -6,13 +6,17 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: update-nightly
+  cancel-in-progress: true
+
 jobs:
   autoupdate:
     permissions:
       contents: write
     runs-on: arc-runner-set
     container:
-      image: ghcr.io/terrapkg/builder:tumbleweed
+      image: ghcr.io/terrapkg/tuatara-builder:tumbleweed
       options: --cap-add=SYS_ADMIN --privileged
     steps:
       - name: Checkout

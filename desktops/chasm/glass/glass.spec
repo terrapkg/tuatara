@@ -3,7 +3,7 @@
 
 Name:           glass
 Release:        1%{?dist}
-Version:        0.3.46
+Version:        0.3.48
 Summary:        Pure assembly terminal emulator
 License:        Unlicense
 URL:            https://github.com/isene/glass

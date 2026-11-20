@@ -1,4 +1,4 @@
-%global ver build/0.1.529
+%global ver 0.1.576
 
 Name:			openutau.bin
 Version:		%(echo %ver | sed -E 's@^build/@@')

@@ -1,0 +1,7 @@
+[tuatara-source]
+name=Tuatara Tumbleweed - Source
+baseurl=https://repos.fyralabs.com/tuatara-tumbleweed-source
+#metalink=https://tetsudou.fyralabs.com/metalink?repo=tuatara-tumbleweed-source&arch=$basearch
+gpgcheck=1
+gpgkey=file:///usr/lib/rpm/gnupg/keys/gpg-pubkey-tuatara-tumbleweed.asc
+enabled=0
