@@ -36,7 +36,9 @@ Next-generation modern RPM repository metadata generator
 
 %prep
 %autosetup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup-install.sh
+chmod +x rustup-install.sh
+./rustup-install.sh -y
 %global _cargo_home %{rpmbuilddir}%{?buildsubdir:/%{buildsubdir}}/.cargo 
 %{__rm} -rf {.cargo/,%{_cargo_home}/} 
 %global _rustup_home %{rpmbuilddir}/.rustup 
