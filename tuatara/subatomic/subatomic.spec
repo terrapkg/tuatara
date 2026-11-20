@@ -1,4 +1,5 @@
 %undefine __brp_mangle_shebangs
+%global rustflags_opt_level 3
 
 Name:           subatomic
 Version:        1.1.5
