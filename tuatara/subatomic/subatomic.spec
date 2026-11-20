@@ -73,12 +73,12 @@ install -Dm 755 target/release/satm         %{buildroot}%{_bindir}/satm
 install -Dm 755 target/release/kiritan      %{buildroot}%{_bindir}/kiritan
 cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e "\|/.*:|{s|/| OR |}" | sort -u > LICENSE.dependencies
 pushd crates/libsubatomic
-cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e "\|/.*:|{s|/| OR |}" | sort -u > LICENSE-libsubatomic.dependencies
+cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e "\|/.*:|{s|/| OR |}" | sort -u > ../../LICENSE-libsubatomic.dependencies
 popd
 for crate in kiritan satm; do
 mkdir -p license_${crate}
 pushd crates/$crate
-cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e "\|/.*:|{s|/| OR |}" | sort -u > LICENSE.dependencies
+cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e "\|/.*:|{s|/| OR |}" | sort -u > ../../license_${crate}/LICENSE.dependencies
 popd
 done
 
