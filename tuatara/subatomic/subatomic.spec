@@ -2,7 +2,7 @@
 #global rustflags_opt_level 3
 
 Name:           subatomic
-Version:        1.1.5
+Version:        1.1.6
 Release:        1%{?dist}
 Summary:        A modern package delivery system
 SourceLicense:  AGPL-3.0-or-later
