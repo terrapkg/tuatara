@@ -68,9 +68,9 @@ popd
 done
 
 %install
-install -Dm 755 target/rpm/subatomic    %{buildroot}%{_bindir}/subatomic
-install -Dm 755 target/rpm/satm         %{buildroot}%{_bindir}/satm
-install -Dm 755 target/rpm/kiritan      %{buildroot}%{_bindir}/kiritan
+install -Dm 755 target/release/subatomic    %{buildroot}%{_bindir}/subatomic
+install -Dm 755 target/release/satm         %{buildroot}%{_bindir}/satm
+install -Dm 755 target/release/kiritan      %{buildroot}%{_bindir}/kiritan
 cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e "\|/.*:|{s|/| OR |}" | sort -u > LICENSE.dependencies
 pushd crates/libsubatomic
 cargo tree --format "{l}: {p}" | sed -e "s: ($(pwd)[^)]*)::g" -e "s: / :/:g" -e "\|/.*:|{s|/| OR |}" | sort -u > LICENSE-libsubatomic.dependencies
