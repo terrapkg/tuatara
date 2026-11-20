@@ -10,7 +10,6 @@ URL:            https://github.com/FyraLabs/subatomic
 Source0:        %url/archive/refs/tags/v%version.tar.gz
 
 BuildRequires:  cargo-packaging
-BuildRequires:  rustup
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(libzstd)
 
@@ -37,6 +36,7 @@ Next-generation modern RPM repository metadata generator
 
 %prep
 %autosetup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 %global _cargo_home %{rpmbuilddir}%{?buildsubdir:/%{buildsubdir}}/.cargo 
 %{__rm} -rf {.cargo/,%{_cargo_home}/} 
 %global _rustup_home %{rpmbuilddir}/.rustup 
