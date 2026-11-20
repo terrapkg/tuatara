@@ -36,16 +36,16 @@ Next-generation modern RPM repository metadata generator
 
 %prep
 %autosetup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup-install.sh
-chmod +x rustup-install.sh
-./rustup-install.sh -y
 %global _cargo_home %{rpmbuilddir}%{?buildsubdir:/%{buildsubdir}}/.cargo 
 %{__rm} -rf {.cargo/,%{_cargo_home}/} 
 %global _rustup_home %{rpmbuilddir}/.rustup 
 %global __cargo . %{_cargo_home}/env && /usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTFLAGS='%{terra_rustflags}' %{_cargo_home}/bin/cargo 
 %global __rustc %{_cargo_home}/bin/rustc 
 %global __rustdoc %{_cargo_home}/bin/rustdoc 
-/usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes rustup-init --default-toolchain nightly -y -q --no-modify-path 
+%dnl /usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes rustup-init --default-toolchain nightly -y -q --no-modify-path 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup-install.sh
+chmod +x rustup-install.sh
+/usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes ./rustup-install.sh -y
 . %{_cargo_home}/env 
 %bcond rust_nightly 1
 
