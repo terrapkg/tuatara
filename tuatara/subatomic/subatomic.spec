@@ -1,5 +1,5 @@
 %undefine __brp_mangle_shebangs
-%global rustflags_opt_level 3
+#global rustflags_opt_level 3
 
 Name:           subatomic
 Version:        1.1.5
@@ -43,10 +43,7 @@ Next-generation modern RPM repository metadata generator
 %global __cargo . %{_cargo_home}/env && /usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTFLAGS='%{terra_rustflags}' %{_cargo_home}/bin/cargo 
 %global __rustc %{_cargo_home}/bin/rustc 
 %global __rustdoc %{_cargo_home}/bin/rustdoc 
-%dnl /usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes rustup-init --default-toolchain nightly -y -q --no-modify-path 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup-install.sh
-chmod +x rustup-install.sh
-/usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes ./rustup-install.sh -y
+/usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes rustup-init --default-toolchain nightly -y -q --no-modify-path 
 . %{_cargo_home}/env 
 %bcond rust_nightly 1
 
@@ -56,7 +53,7 @@ pushd crates/$crate
 popd
 done
 
-%cargo_prep_online
+#cargo_prep_online
 
 %build
 export ZSTD_SYS_USE_PKG_CONFIG=1
