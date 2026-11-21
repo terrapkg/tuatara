@@ -25,7 +25,6 @@ BuildRequires:  mold
 Requires:       rpm-build
 Requires:       createrepo_c
 Requires:       git-core
-Requires:       osc
 Packager:       Terra Packaging Team <terra@fyralabs.com>
 
 %description
