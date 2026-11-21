@@ -1,3 +1,6 @@
+%global satm_version    1.2.0
+%global kiritan_version 1.1.2
+
 %undefine __brp_mangle_shebangs
 #global rustflags_opt_level 3
 
@@ -22,14 +25,14 @@ It manages a repository of packages, handling updating, signing, and other
 tasks.
 
 %package -n satm
-Version:        1.1.0
+Version:        %{satm_version}
 Summary:        CLI web client for subatomic-server
 
 %description -n satm
 CLI web client for subatomic-server.
 
 %package -n kiritan
-Version:        1.1.1
+Version:        %{kiritan_version}
 Summary:        Next-generation modern RPM repository metadata generator
 
 %description -n kiritan
@@ -43,9 +46,9 @@ Next-generation modern RPM repository metadata generator
 %global __cargo . %{_cargo_home}/env && /usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTFLAGS='%{terra_rustflags}' %{_cargo_home}/bin/cargo 
 %global __rustc %{_cargo_home}/bin/rustc 
 %global __rustdoc %{_cargo_home}/bin/rustdoc 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup.sh
-chmod +x rustup.sh
-/usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes ./rustup.sh --default-toolchain nightly -y -q --no-modify-path 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+  | /usr/bin/env CARGO_HOME=%{_cargo_home} RUSTUP_HOME=%{_rustup_home} RUSTUP_INIT_SKIP_PATH_CHECK=yes sh \
+    -- --default-toolchain nightly -y -q --no-modify-path 
 . %{_cargo_home}/env 
 %bcond rust_nightly 1
 
