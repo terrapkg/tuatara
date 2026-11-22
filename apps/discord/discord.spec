@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 Name:           discord
 Version:        1.0.170
 Release:        1%{?dist}
@@ -9,8 +11,6 @@ License:        Proprietary
 Requires:       zenity
 Group:          Applications/Internet
 ExclusiveArch:  x86_64
-
-%electronmeta -D
 
 %description
 All-in-one voice and text chat for gamers that's free, secure, and works on
