@@ -3,7 +3,7 @@
 %forgemeta
 
 Name:    vala-panel-appmenu
-Version: 26.11
+Version: 26.11.1
 Release: 1%{?dist}
 License: LGPL-3.0-or-later
 Summary: Application Menu plugin for vala-panel
