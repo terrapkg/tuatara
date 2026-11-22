@@ -10,6 +10,7 @@ Source1:        https://discord.com/terms#/terms.html
 License:        Proprietary
 Requires:       zenity
 Group:          Applications/Internet
+BuildRequires:  desktop-file-utils
 ExclusiveArch:  x86_64
 
 %description
