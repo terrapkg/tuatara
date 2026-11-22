@@ -92,7 +92,7 @@ jobs:
       - name: Build Subatomic
         run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/subatomic
       - name: Install Subatomic
-        run: zypper install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/subatomic-*.rpm
+        run: zypper install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/satm-*.rpm
 
       - name: Tidy up output directory
         run: rmdir anda-build/rpm/rpms/{noarch,aarch64,x86_64} | true
