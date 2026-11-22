@@ -2,7 +2,7 @@
 
 Name:           discord-canary
 Version:        1.0.2506
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Free Voice and Text Chat for Gamers
 URL:            discord.com
 Source0:        https://dl-canary.discordapp.net/apps/linux/%{version}/%{name}-%{version}.tar.gz
