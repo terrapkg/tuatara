@@ -92,24 +92,28 @@ jobs:
       - name: Build Subatomic
         run: anda build -D "vendor Tuatara" -rrpmbuild tuatara/subatomic
       - name: Install Subatomic
-        run: zypper install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/subatomic-*.rpm
+        run: zypper install --allow-unsigned-rpm -y ./anda-build/rpm/rpms/satm-*.rpm
 
       - name: Tidy up output directory
         run: rmdir anda-build/rpm/rpms/{noarch,aarch64,x86_64} | true
 
       - name: Upload packages to subatomic
         run: |
-          subatomic-cli upload --prune \
-            --server https://subatomic.fyralabs.com \
-            --token ${{ secrets.SUBATOMIC_TOKEN }} \
-            tuatara-${{ matrix.version }} anda-build/rpm/rpms/*
+          satm repo upload \
+            tuatara-${{ matrix.version }} \
+            anda-build/rpm/rpms/*
+        env:
+          SUBATOMIC_API_URL: https://kiritanpo.fyralabs.com
+          SUBATOMIC_API_TOKEN: ${{ secrets.KIRITANPO_TOKEN }}
 
       - name: Upload source packages to subatomic
         run: |
-          subatomic-cli upload --prune \
-            --server https://subatomic.fyralabs.com \
-            --token ${{ secrets.SUBATOMIC_TOKEN }} \
-            tuatara-${{ matrix.version }}-source anda-build/rpm/srpm/*
+          satm repo upload \
+            tuatara-${{ matrix.version }}-source \
+            anda-build/rpm/rpms/*
+        env:
+          SUBATOMIC_API_URL: https://kiritanpo.fyralabs.com
+          SUBATOMIC_API_TOKEN: ${{ secrets.KIRITANPO_TOKEN }}
 
       - name: Create Madoguchi Repository
         run: |
