@@ -1,6 +1,6 @@
-%global commit 7a1274d25b2304deed326c5a43bf3617fedcb990
+%global commit de19c2c3a18e9d1d3dc4e89eae13d8413e3353d2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20261111
+%global commitdate 20261123
 %global ver 0.83
 
 Name:           hid-tmff2
