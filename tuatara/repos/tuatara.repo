@@ -1,6 +1,6 @@
 [tuatara]
 name=Tuatara Tumbleweed
-baseurl=https://repos.fyralabs.com/tuatara-tumbleweed
+baseurl=https://kiritanpo-objects.fyralabs.com/tuatara-tumbleweed
 #metalink=https://tetsudou.fyralabs.com/metalink?repo=tuatara-tumbleweed&arch=$basearch
 gpgcheck=1
 gpgkey=file:///usr/lib/rpm/gnupg/keys/gpg-pubkey-tuatara-tumbleweed.asc
