@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:           discord-ptb
-Version:        1.0.229
-Release:        2%{?dist}
+Version:        1.0.230
+Release:        1%{?dist}
 Summary:        Free Voice and Text Chat for Gamers.
 URL:            https://discord.com
 Source0:        https://dl-ptb.discordapp.net/apps/linux/%{version}/%{name}-%{version}.tar.gz
