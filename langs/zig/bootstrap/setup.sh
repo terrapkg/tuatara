@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-version=0.18.0-dev.1279+81de6a1c6
+version=0.18.0-dev.1284+2385a0153
 
 mirrors=()
 
