@@ -1,5 +1,5 @@
 Name:       webapp-manager
-Version:    master.mint22
+Version:    master.mint27
 Release:    1%{?dist}
 Summary:    Web Application Manager
 License:    GPL-3.0-or-later
